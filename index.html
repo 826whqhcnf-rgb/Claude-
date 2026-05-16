@@ -261,7 +261,7 @@ body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-s
 <div class="side">
   <div class="logo">
     <div class="logo-t">Edexcel Econ A</div>
-    <div class="logo-s">AI-POWERED · A★ FOCUS</div>
+    <div class="logo-s">A★ FOCUS · FULL SPEC</div>
     <div class="logo-th">▸ All 4 Themes · Full Spec</div>
   </div>
   <div class="stats">
@@ -287,14 +287,13 @@ body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-s
   <div class="top">
     <div class="top-t" id="tt">Select a topic to begin</div>
     <button class="btn btn-fc" id="fcTog" onclick="fcOpen()">🗂️ Flashcards</button>
-    <button class="btn btn-ai" id="aiTog" onclick="aiT()">🤖 AI Tutor</button>
     <button class="btn btn-rst" onclick="rst()">↺ Reset</button>
   </div>
   <div class="carea">
     <div class="tp" id="tp">
       <div class="wel" id="wel">
         <h1>Every spec point.<br><em>Every diagram.</em><br>Mastered.</h1>
-        <p class="wel-sub">All 76 spec points across all 4 themes, with complete notes, rendered diagrams, exam tips and an AI tutor. Start with any theme below.</p>
+        <p class="wel-sub">Every spec point across all 4 themes, with complete notes, rendered diagrams, exam tips and flashcards. Start with any theme below.</p>
         <div class="wel-grid">
           <div class="wel-card" style="border-left-color:#ff5a8e" onclick="ld('1.1.1')"><div class="wel-card-lbl" style="color:#ff5a8e">§ THEME 1 · MICRO</div><div class="wel-card-t">Markets & Market Failure</div><div class="wel-card-d">Demand, supply, elasticities, externalities, intervention</div></div>
           <div class="wel-card" style="border-left-color:#4ac8e8" onclick="ld('2.1.1')"><div class="wel-card-lbl" style="color:#4ac8e8">§ THEME 2 · MACRO</div><div class="wel-card-t">UK Economy & Policies</div><div class="wel-card-d">GDP, inflation, AD/AS, multiplier, fiscal & monetary</div></div>
@@ -397,34 +396,6 @@ body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-s
       </div>
     </div>
 
-    <!-- AI -->
-    <div class="ai" id="aip">
-      <div class="ai-h">
-        <span style="font-size:15px">🤖</span>
-        <div><div class="ai-t">AI Economics Tutor</div><span class="ai-s">Claude · Edexcel spec · A★ focused</span></div>
-        <button class="ai-x" onclick="aiT()">✕</button>
-      </div>
-      <div class="ai-q">
-        <button class="qb" onclick="qa('Quiz me on this topic with 3 exam-style questions, one at a time')">📝 Quiz me</button>
-        <button class="qb" onclick="qa('Write a 12-mark exam question on this topic with a full model answer following the Edexcel mark scheme')">📄 12-mark Q</button>
-        <button class="qb" onclick="qa('Write a 25-mark essay question with a detailed A★ plan: intro, 3 analysis points with diagrams described, 3 evaluation points, and justified conclusion')">📋 25-mark essay</button>
-        <button class="qb" onclick="qa('What are the 5 most common exam mistakes on this topic and how do I avoid them?')">⚠ Mistakes</button>
-        <button class="qb" onclick="qa('Give me 5 current real-world examples for this topic I can use in exam answers')">🌍 Examples</button>
-        <button class="qb" onclick="qa('Explain the strongest 4 evaluation points for essays on this topic')">⚖ Evaluation</button>
-        <button class="qb" onclick="qa('Give me a difficult MCQ on this topic, then reveal and explain the answer')">🎯 MCQ</button>
-        <button class="qb" onclick="qa('Explain this topic in a different way using a vivid analogy or thought experiment')">💡 Different angle</button>
-      </div>
-      <div class="ai-m" id="aiM">
-        <div class="msg ai"><div class="av">AI</div><div class="bub">Hello! I'm your Edexcel A Level Economics tutor, powered by Claude. I have the full Theme 1 content in front of me and respond like a professor — precise, rigorous, and exam-focused.<br><br>Select any topic, then use the quick buttons above or ask me anything. Let's get you that A★. 📚</div></div>
-      </div>
-      <div class="ai-i">
-        <div class="ai-r">
-          <textarea class="ai-x-ta" id="aiI" placeholder="Ask anything about economics..." rows="1" onkeydown="hk(event)" oninput="ar(this)"></textarea>
-          <button class="ai-snd" id="aiS" onclick="sm()">Send</button>
-        </div>
-        <div class="ai-c" id="aiC">No topic selected</div>
-      </div>
-    </div>
   </div>
 </div>
 </div>
@@ -960,9 +931,6 @@ let ST = (() => {
 })();
 let curFilter = 'all';
 let curId = null;
-let aiOpen = false;
-let chatHistory = [];
-let busy = false;
 
 function save(){
   const data = JSON.stringify(ST);
@@ -1013,7 +981,6 @@ function ld(id){
   if(!t) return;
   document.querySelectorAll('.item').forEach(el => el.classList.toggle('on', el.dataset.id===id));
   document.getElementById('tt').textContent = `${t.id} — ${t.name}`;
-  document.getElementById('aiC').textContent = `Topic: ${t.id} ${t.name}`;
   document.getElementById('wel').style.display = 'none';
   const tc = document.getElementById('tc');
   tc.style.display = 'block';
@@ -1030,7 +997,6 @@ function ld(id){
     <div class="hdr-t">${t.name}</div>
     <div class="hdr-act">
       ${btns.map(b=>`<button class="sbn ${s.status===b.k?'s'+b.k[0]:''}" onclick="setSt('${id}','${b.k}')">${b.l}</button>`).join('')}
-      <button class="ask" onclick="qa('Teach me ${t.id} ${t.name} — start with a quick professor-style overview, then walk me through the hardest concept, then give me one tricky exam question.')">🤖 Ask AI about this</button>
     </div>
   </div>`;
 
@@ -1129,110 +1095,6 @@ function rst(){
   if(curId) ld(curId);
 }
 
-function aiT(){
-  aiOpen = !aiOpen;
-  document.getElementById('aip').classList.toggle('open', aiOpen);
-  document.getElementById('aiTog').classList.toggle('on', aiOpen);
-}
-
-function qa(q){
-  if(!aiOpen) aiT();
-  document.getElementById('aiI').value = q;
-  sm();
-}
-
-function hk(e){
-  if(e.key==='Enter' && !e.shiftKey){ e.preventDefault(); sm(); }
-}
-
-function ar(el){
-  el.style.height = 'auto';
-  el.style.height = Math.min(el.scrollHeight, 90)+'px';
-}
-
-function addM(role, html){
-  const m = document.getElementById('aiM');
-  const d = document.createElement('div');
-  d.className = 'msg '+role;
-  d.innerHTML = `<div class="av">${role==='ai'?'AI':'You'}</div><div class="bub">${html}</div>`;
-  m.appendChild(d);
-  m.scrollTop = m.scrollHeight;
-}
-
-function addTyp(){
-  const m = document.getElementById('aiM');
-  const d = document.createElement('div');
-  d.className = 'msg ai'; d.id = 'typ';
-  d.innerHTML = `<div class="av">AI</div><div class="bub"><div class="typ"><span></span><span></span><span></span></div></div>`;
-  m.appendChild(d); m.scrollTop = m.scrollHeight;
-}
-
-function rmTyp(){ const t = document.getElementById('typ'); if(t) t.remove(); }
-
-async function sm(){
-  if(busy) return;
-  const inp = document.getElementById('aiI');
-  const text = inp.value.trim();
-  if(!text) return;
-  busy = true;
-  document.getElementById('aiS').disabled = true;
-  inp.value = ''; inp.style.height = 'auto';
-  addM('user', text);
-  chatHistory.push({role:'user', content:text});
-  addTyp();
-
-  const topic = curId ? TOPICS.find(t => t.id===curId) : null;
-  const ctx = topic ? `The student is currently studying: **${topic.id} — ${topic.name}** (Edexcel A Level Economics A). Section: ${topic.sec}.` : 'No specific topic selected.';
-
-  const sys = `You are an expert Edexcel A Level Economics A tutor. You know the full specification (Themes 1-4) inside out. Your student is targeting an A★ grade.
-
-${ctx}
-
-Your responses should:
-- Be exam-focused: always link to Edexcel mark schemes (AO1 knowledge, AO2 application, AO3 analysis, AO4 evaluation)
-- Use precise economic terminology
-- Include specific real-world examples
-- Reference key economists by name (Smith, Marx, Hayek, Akerlof, Thaler etc.) when relevant
-- For essay questions: provide a clear plan with thesis → analysis → evaluation → conclusion
-- For diagrams: explain exactly what to draw, label, and why each element matters
-- Be honest about genuine economic debates and disagreements
-- Keep responses focused — not too brief to be useful, not so long they become overwhelming
-
-Format with **bold** for key terms and ## for subheadings.`;
-
-  try {
-    const r = await fetch('https://api.anthropic.com/v1/messages', {
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({
-        model:'claude-sonnet-4-20250514',
-        max_tokens:1200,
-        system: sys,
-        messages: chatHistory.slice(-12)
-      })
-    });
-    const data = await r.json();
-    rmTyp();
-    if(data.error) throw new Error(data.error.message);
-    const raw = data.content?.[0]?.text || 'Sorry, I could not generate a response.';
-    const rendered = raw
-      .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
-      .replace(/^### (.+)$/gm,'<h4>$1</h4>')
-      .replace(/^## (.+)$/gm,'<h4>$1</h4>')
-      .replace(/^# (.+)$/gm,'<h4>$1</h4>')
-      .replace(/^- (.+)$/gm,'<li>$1</li>')
-      .replace(/(<li>[\s\S]*?<\/li>)/g,'<ul>$1</ul>')
-      .replace(/\n\n/g,'<br><br>')
-      .replace(/\n/g,'<br>');
-    addM('ai', rendered);
-    chatHistory.push({role:'assistant', content: raw});
-  } catch(err) {
-    rmTyp();
-    addM('ai', `<span style="color:#ff5a6a">Error: ${err.message}. Please try again.</span>`);
-  }
-  busy = false;
-  document.getElementById('aiS').disabled = false;
-}
 // ═══ THEME 2: §2.1 MEASURES OF PERFORMANCE (4 topics) ═══
 TOPICS.push(
 {id:'2.1.1',sec:'2.1 Measures of Economic Performance',name:'Economic Growth',
@@ -2779,8 +2641,6 @@ function fcOpen(){
   document.getElementById('fcActive').style.display = 'none';
   document.getElementById('fcDone').style.display = 'none';
   document.getElementById('fcTog').classList.add('on');
-  document.getElementById('aiTog').classList.remove('on');
-  if(aiOpen) aiT();
   document.getElementById('tt').textContent = 'Flashcards';
   fcUpdateStats();
   checkStorage();
