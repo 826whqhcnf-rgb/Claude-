@@ -275,6 +275,66 @@ body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-s
 .cf-pit{background:rgba(255,90,106,.06);border-left:2px solid var(--bad);border-radius:0 7px 7px 0;padding:9px 14px;margin-bottom:7px;font-size:12px;line-height:1.6;color:var(--ink)}
 .cf-pit b{color:var(--bad);font-weight:600;display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.6px;text-transform:uppercase;margin-bottom:3px}
 
+/* LESSON MODE */
+.ls-btn{padding:6px 13px;border-radius:5px;border:1px solid var(--ok);background:rgba(74,232,160,.12);color:var(--ok);font-family:'JetBrains Mono',monospace;font-size:9px;cursor:pointer;letter-spacing:.3px;transition:all .15s}
+.ls-btn:hover{background:rgba(74,232,160,.25);box-shadow:0 0 10px rgba(74,232,160,.18)}
+.ls-mode{padding:14px 30px 80px;max-width:780px;margin:0 auto;display:none}
+.ls-mode.on{display:block}
+.ls-bar{display:flex;align-items:center;gap:14px;margin-bottom:18px;padding:10px 14px;background:var(--surf2);border:1px solid var(--bord);border-radius:8px}
+.ls-bar-meta{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--mut);letter-spacing:.4px}
+.ls-bar-meta b{color:var(--ok)}
+.ls-bar-track{flex:1;height:5px;background:var(--bord);border-radius:3px;overflow:hidden}
+.ls-bar-fill{height:100%;background:linear-gradient(90deg,var(--ok),var(--info));border-radius:3px;transition:width .35s ease-out}
+.ls-bar-exit{background:transparent;border:1px solid var(--bord2);color:var(--mut);font-family:'JetBrains Mono',monospace;font-size:9px;padding:4px 9px;border-radius:4px;cursor:pointer;letter-spacing:.3px}
+.ls-bar-exit:hover{color:var(--bad);border-color:var(--bad)}
+.ls-step{background:linear-gradient(160deg,var(--surf2) 0%,var(--surf3) 100%);border:1px solid var(--bord2);border-radius:12px;padding:24px 26px;min-height:260px;display:flex;flex-direction:column;animation:lsIn .3s ease-out;box-shadow:0 6px 20px rgba(0,0,0,.22)}
+@keyframes lsIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.ls-step-kind{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--ok);letter-spacing:1.4px;margin-bottom:14px;text-transform:uppercase;display:flex;align-items:center;gap:7px}
+.ls-step-kind::before{content:'';width:18px;height:1px;background:var(--ok)}
+.ls-prompt{font-family:'Fraunces',serif;font-size:22px;font-weight:600;line-height:1.3;color:var(--ink);margin-bottom:12px;letter-spacing:-.3px}
+.ls-prompt em{color:var(--acc);font-style:italic}
+.ls-think{font-size:13px;color:var(--mut);line-height:1.6;font-style:italic;padding:10px 14px;background:rgba(74,232,160,.06);border-left:2px solid var(--ok);border-radius:0 6px 6px 0;margin-bottom:14px}
+.ls-reveal{background:rgba(74,200,232,.08);border:1px solid rgba(74,200,232,.3);border-radius:8px;padding:14px 16px;font-size:13.5px;line-height:1.7;color:var(--ink);margin-bottom:14px;animation:lsRev .25s ease-out}
+@keyframes lsRev{from{opacity:0;transform:scaleY(.96)}to{opacity:1;transform:scaleY(1)}}
+.ls-reveal strong{color:var(--acc);font-weight:600}
+.ls-reveal h4{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--info);text-transform:uppercase;letter-spacing:.8px;margin:8px 0 4px}
+.ls-term{font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--acc);background:var(--surf);padding:5px 11px;border-radius:5px;display:inline-block;margin-bottom:8px;letter-spacing:.3px}
+.ls-mcq-opts{display:grid;gap:8px;margin-top:8px}
+.ls-mcq-opt{background:var(--surf);border:1px solid var(--bord);border-radius:7px;padding:11px 14px;font-family:'Inter',sans-serif;font-size:13px;line-height:1.55;color:var(--ink);cursor:pointer;text-align:left;transition:all .15s;display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:start}
+.ls-mcq-opt:hover:not(:disabled){border-color:var(--info);background:rgba(74,200,232,.08)}
+.ls-mcq-opt:disabled{cursor:default}
+.ls-mcq-opt-letter{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--mut);font-weight:600;background:var(--surf3);padding:3px 0;text-align:center;border-radius:3px;line-height:1.4}
+.ls-mcq-opt.correct{border-color:var(--ok);background:rgba(74,232,160,.12)}
+.ls-mcq-opt.correct .ls-mcq-opt-letter{background:var(--ok);color:#000}
+.ls-mcq-opt.wrong{border-color:var(--bad);background:rgba(255,90,106,.1)}
+.ls-mcq-opt.wrong .ls-mcq-opt-letter{background:var(--bad);color:#fff}
+.ls-mcq-fb{font-size:12.5px;line-height:1.6;color:var(--ink);padding:10px 13px;border-radius:7px;margin-top:11px;animation:lsRev .25s}
+.ls-mcq-fb.ok{background:rgba(74,232,160,.08);border-left:2px solid var(--ok)}
+.ls-mcq-fb.bad{background:rgba(255,90,106,.06);border-left:2px solid var(--bad)}
+.ls-mcq-fb b{display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.6px;text-transform:uppercase;margin-bottom:3px}
+.ls-mcq-fb.ok b{color:var(--ok)}
+.ls-mcq-fb.bad b{color:var(--bad)}
+.ls-dgrm{background:linear-gradient(180deg,#0d0f17 0%,var(--surf2) 100%);border:1px solid var(--bord);border-radius:8px;padding:14px;margin:8px 0 14px}
+.ls-dgrm svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.ls-recap-list{display:grid;gap:6px;margin-top:8px}
+.ls-recap-item{display:flex;align-items:flex-start;gap:9px;padding:8px 11px;background:var(--surf);border:1px solid var(--bord);border-radius:6px;font-size:12.5px;line-height:1.55;color:var(--ink)}
+.ls-recap-item::before{content:'✓';color:var(--ok);font-weight:700;font-size:13px;flex-shrink:0;margin-top:1px}
+.ls-finish{text-align:center;padding:30px 0 10px}
+.ls-finish-icon{font-size:42px;margin-bottom:10px}
+.ls-finish h2{font-family:'Fraunces',serif;font-size:26px;color:var(--ok);margin-bottom:6px}
+.ls-finish-score{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--mut);margin:6px 0 18px;letter-spacing:.4px}
+.ls-finish-score b{color:var(--ok);font-size:14px}
+.ls-controls{display:flex;justify-content:space-between;align-items:center;margin-top:16px;gap:8px}
+.ls-btn-prim{background:rgba(74,200,232,.15);border:1px solid var(--info);color:var(--info);font-family:'JetBrains Mono',monospace;font-size:10px;padding:9px 16px;border-radius:6px;cursor:pointer;letter-spacing:.5px;transition:all .15s}
+.ls-btn-prim:hover{background:rgba(74,200,232,.28);box-shadow:0 0 10px rgba(74,200,232,.2)}
+.ls-btn-next{background:rgba(74,232,160,.15);border:1px solid var(--ok);color:var(--ok);font-family:'JetBrains Mono',monospace;font-size:10px;padding:9px 16px;border-radius:6px;cursor:pointer;letter-spacing:.5px;transition:all .15s}
+.ls-btn-next:hover{background:rgba(74,232,160,.3);box-shadow:0 0 10px rgba(74,232,160,.22)}
+.ls-btn-next:disabled{opacity:.4;cursor:not-allowed}
+.ls-btn-mark{background:rgba(74,232,160,.15);border:1px solid var(--ok);color:var(--ok);font-family:'JetBrains Mono',monospace;font-size:10.5px;padding:11px 22px;border-radius:6px;cursor:pointer;letter-spacing:.5px}
+.ls-btn-mark:hover{background:rgba(74,232,160,.3)}
+.ls-btn-skip{background:transparent;border:none;color:var(--mut);font-family:'JetBrains Mono',monospace;font-size:9.5px;cursor:pointer;letter-spacing:.4px;padding:6px}
+.ls-btn-skip:hover{color:var(--ink)}
+
 /* SVG styles */
 .ax{stroke:#6b7590;stroke-width:1.5;fill:none}
 .gr{stroke:#2a2f3d;stroke-width:.5;fill:none}
@@ -441,6 +501,9 @@ body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-s
           </div>
         </div>
       </div>
+
+      <!-- LESSON VIEW -->
+      <div id="lsView" class="ls-mode"></div>
 
       <!-- EXAM CRAFT VIEW -->
       <div id="cfView" style="display:none">
@@ -1064,6 +1127,7 @@ function ld(id){
     <div class="hdr-t">${t.name}</div>
     <div class="hdr-act">
       ${btns.map(b=>`<button class="sbn ${s.status===b.k?'s'+b.k[0]:''}" onclick="setSt('${id}','${b.k}')">${b.l}</button>`).join('')}
+      <button class="ls-btn" onclick="lsStart('${id}')" style="margin-left:auto">🎓 Start Lesson →</button>
     </div>
   </div>`;
 
@@ -2998,6 +3062,11 @@ ld = function(id){
   if(document.getElementById('cfView').style.display === 'block'){
     cfClose();
   }
+  const lsv = document.getElementById('lsView');
+  if(lsv && lsv.classList.contains('on')){
+    lsv.classList.remove('on');
+    lsv.innerHTML = '';
+  }
   _origLd(id);
 };
 
@@ -3086,6 +3155,8 @@ function cfOpen(){
   document.getElementById('wel').style.display = 'none';
   document.getElementById('tc').style.display = 'none';
   document.getElementById('fcView').style.display = 'none';
+  const lsv = document.getElementById('lsView');
+  if(lsv && lsv.classList.contains('on')){ lsv.classList.remove('on'); lsv.innerHTML = ''; }
   document.getElementById('cfView').style.display = 'block';
   document.getElementById('cfTog').classList.add('on');
   document.getElementById('fcTog').classList.remove('on');
@@ -3151,8 +3222,376 @@ fcOpen = function(){
   if(document.getElementById('cfView').style.display === 'block'){
     cfClose();
   }
+  if(document.getElementById('lsView').classList.contains('on')){
+    lsExit(true);
+  }
   _origFcOpen();
 };
+
+// ═══ LESSON MODE ═══
+let lsState = { topicId:null, steps:[], idx:0, revealed:false, mcqAnswered:false, score:0, mcqTotal:0 };
+
+function lsShuffle(arr){
+  for(let i = arr.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function lsBuildSteps(topic){
+  const steps = [];
+
+  // 1. Intro
+  steps.push({
+    kind: 'INTRO',
+    type: 'intro',
+    prompt: `Welcome to <em>${topic.name}</em>`,
+    body: `This lesson will walk you through ${topic.id} part by part. Spec section: <strong>${topic.sec}</strong>. Click <em>Start</em> when ready.`,
+    nextLabel: 'Start →'
+  });
+
+  // 2. Definition reveal-cards — try, then reveal
+  (topic.defs || []).forEach((d, i) => {
+    steps.push({
+      kind: `KEY TERM · ${i+1} of ${topic.defs.length}`,
+      type: 'def',
+      term: d[0],
+      prompt: `Define <em>${d[0]}</em>`,
+      think: 'Try it in your head, then click Reveal.',
+      reveal: d[1]
+    });
+  });
+
+  // 3. An auto-generated MCQ from the definitions (if enough)
+  if((topic.defs || []).length >= 3){
+    const correctIdx = Math.floor(Math.random() * topic.defs.length);
+    const correctDef = topic.defs[correctIdx];
+    // Build distractors from OTHER defs in same topic, or fall back to other topics in same section
+    const others = topic.defs.filter((_,i) => i !== correctIdx).map(d => d[1]);
+    let distractors = lsShuffle([...others]).slice(0, 3);
+    // Fall back if not enough
+    if(distractors.length < 3){
+      const sameSection = TOPICS.filter(t => t.sec === topic.sec && t.id !== topic.id);
+      const extra = [];
+      sameSection.forEach(t => (t.defs||[]).forEach(d => extra.push(d[1])));
+      distractors = [...distractors, ...lsShuffle(extra).slice(0, 3 - distractors.length)];
+    }
+    const optionsRaw = [correctDef[1], ...distractors];
+    // shuffle and track new correct index
+    const indexed = optionsRaw.map((text, i) => ({text, isCorrect: i === 0}));
+    lsShuffle(indexed);
+    steps.push({
+      kind: 'QUICK CHECK',
+      type: 'mcq',
+      prompt: `Which is the correct meaning of <em>${correctDef[0]}</em>?`,
+      options: indexed.map(x => x.text),
+      correctIdx: indexed.findIndex(x => x.isCorrect),
+      explanation: `<strong>${correctDef[0]}</strong> means: ${correctDef[1]}`
+    });
+  }
+
+  // 4. Theory reveal-cards
+  (topic.theory || []).forEach((tt, i) => {
+    steps.push({
+      kind: `CORE THEORY · ${i+1} of ${topic.theory.length}`,
+      type: 'theory',
+      prompt: tt.h,
+      think: 'Before reading: predict the explanation in one sentence. Then reveal.',
+      reveal: tt.p
+    });
+  });
+
+  // 5. Formula
+  if(topic.fm){
+    steps.push({
+      kind: 'FORMULA',
+      type: 'formula',
+      prompt: 'Memorise this formula',
+      body: `<div style="font-family:'JetBrains Mono',monospace;font-size:15px;color:var(--acc);text-align:center;padding:12px;background:var(--surf3);border-radius:6px;letter-spacing:.5px">${topic.fm}</div>`,
+      nextLabel: 'Got it →'
+    });
+  }
+
+  // 6. Diagram
+  if(topic.dg){
+    steps.push({
+      kind: 'DIAGRAM',
+      type: 'diagram',
+      prompt: topic.dg.title,
+      think: 'Study the diagram. Identify each curve, the equilibrium points, and any shifts. Click Reveal to read the explanation.',
+      svg: topic.dg.svg,
+      reveal: topic.dg.cap
+    });
+  }
+
+  // 7. Evaluation points
+  const evalPoints = [];
+  if(topic.ev) (Array.isArray(topic.ev) ? topic.ev : [topic.ev]).forEach(e => evalPoints.push(e));
+  if(topic.ev2) evalPoints.push(topic.ev2);
+  evalPoints.forEach((e, i) => {
+    steps.push({
+      kind: `EVALUATION · ${i+1} of ${evalPoints.length}`,
+      type: 'eval',
+      prompt: 'How might you challenge or qualify this view in an exam answer?',
+      think: 'Think first. The reveal shows one strong evaluation move you can use.',
+      reveal: e
+    });
+  });
+
+  // 8. Exam tips
+  (topic.tips || []).forEach((tp, i) => {
+    steps.push({
+      kind: `EXAM TIP · ${i+1} of ${topic.tips.length}`,
+      type: 'tip',
+      prompt: 'Examiner pet-peeve / mark-scheme insight',
+      body: `<div style="background:rgba(245,200,66,.06);border-left:2px solid var(--acc);border-radius:0 7px 7px 0;padding:11px 14px;font-size:13px;line-height:1.65;color:rgba(245,200,66,.92)">${tp}</div>`,
+      nextLabel: 'Note taken →'
+    });
+  });
+
+  // 9. Final MCQ recall (if we already had MCQ, add a second one on a different def)
+  if((topic.defs || []).length >= 4){
+    // Pick a different def for the second MCQ
+    const usedIdx = steps.find(s => s.type === 'mcq');
+    let secondIdx = Math.floor(Math.random() * topic.defs.length);
+    // Try to pick a different one (best effort)
+    for(let tries = 0; tries < 5 && topic.defs.length > 1; tries++){
+      const candidate = topic.defs[secondIdx];
+      // Check if it's already been the subject of a previous MCQ in steps
+      const used = steps.some(s => s.type === 'mcq' && s.prompt.includes(candidate[0]));
+      if(!used) break;
+      secondIdx = (secondIdx + 1) % topic.defs.length;
+    }
+    const correctDef = topic.defs[secondIdx];
+    // Reverse MCQ: given the definition, pick the right term
+    const otherTerms = topic.defs.filter((_,i) => i !== secondIdx).map(d => d[0]);
+    let distractorTerms = lsShuffle([...otherTerms]).slice(0, 3);
+    if(distractorTerms.length < 3){
+      const sameSection = TOPICS.filter(t => t.sec === topic.sec && t.id !== topic.id);
+      const extra = [];
+      sameSection.forEach(t => (t.defs||[]).forEach(d => extra.push(d[0])));
+      distractorTerms = [...distractorTerms, ...lsShuffle(extra).slice(0, 3 - distractorTerms.length)];
+    }
+    const indexed2 = [correctDef[0], ...distractorTerms].map((text, i) => ({text, isCorrect: i === 0}));
+    lsShuffle(indexed2);
+    steps.push({
+      kind: 'FINAL CHECK',
+      type: 'mcq',
+      prompt: `Which term matches this definition? <br><span style="font-family:'Inter',sans-serif;font-style:italic;color:var(--mut);font-size:14px;font-weight:400">"${correctDef[1]}"</span>`,
+      options: indexed2.map(x => x.text),
+      correctIdx: indexed2.findIndex(x => x.isCorrect),
+      explanation: `Correct: <strong>${correctDef[0]}</strong>.`
+    });
+  }
+
+  // 10. Recap with spec checklist
+  if(CHECKS[topic.id]){
+    steps.push({
+      kind: 'RECAP',
+      type: 'recap',
+      prompt: `Spec coverage for <em>${topic.id}</em>`,
+      body: 'You\'ve now seen everything the spec demands for this topic. Quick mental check — could you confidently:',
+      checks: CHECKS[topic.id]
+    });
+  }
+
+  // 11. Finish
+  steps.push({
+    kind: 'COMPLETE',
+    type: 'finish',
+    topicId: topic.id,
+    topicName: topic.name
+  });
+
+  return steps;
+}
+
+function lsStart(topicId){
+  const t = TOPICS.find(x => x.id === topicId);
+  if(!t) return;
+  lsState = {
+    topicId,
+    steps: lsBuildSteps(t),
+    idx: 0,
+    revealed: false,
+    mcqAnswered: false,
+    score: 0,
+    mcqTotal: 0
+  };
+  // Count MCQ total
+  lsState.mcqTotal = lsState.steps.filter(s => s.type === 'mcq').length;
+  // Hide other views
+  document.getElementById('wel').style.display = 'none';
+  document.getElementById('tc').style.display = 'none';
+  document.getElementById('fcView').style.display = 'none';
+  document.getElementById('cfView').style.display = 'none';
+  document.getElementById('fcTog').classList.remove('on');
+  document.getElementById('cfTog').classList.remove('on');
+  document.getElementById('lsView').classList.add('on');
+  document.getElementById('tt').textContent = `Lesson · ${t.id} ${t.name}`;
+  lsRender();
+  document.getElementById('tp').scrollTop = 0;
+}
+
+function lsExit(silent){
+  document.getElementById('lsView').classList.remove('on');
+  document.getElementById('lsView').innerHTML = '';
+  if(!silent && lsState.topicId){
+    // Return to topic view
+    ld(lsState.topicId);
+  }
+}
+
+function lsRender(){
+  const step = lsState.steps[lsState.idx];
+  if(!step){ return; }
+  lsState.revealed = false;
+  lsState.mcqAnswered = false;
+
+  const total = lsState.steps.length;
+  const idx = lsState.idx;
+  const pct = Math.round((idx / (total - 1)) * 100);
+
+  let html = `
+    <div class="ls-bar">
+      <div class="ls-bar-meta"><b>${idx + 1}</b> / ${total} · ${step.kind}</div>
+      <div class="ls-bar-track"><div class="ls-bar-fill" style="width:${pct}%"></div></div>
+      <button class="ls-bar-exit" onclick="lsExit()">✕ Exit</button>
+    </div>
+    <div class="ls-step" id="lsStep">
+      <div class="ls-step-kind">${step.kind}</div>
+      <div class="ls-prompt">${step.prompt}</div>`;
+
+  if(step.type === 'intro'){
+    html += `<p style="font-size:13.5px;line-height:1.7;color:var(--ink);margin-bottom:10px">${step.body}</p>`;
+    html += `<div class="ls-controls"><span></span><button class="ls-btn-next" onclick="lsNext()">${step.nextLabel || 'Next →'}</button></div>`;
+  } else if(step.type === 'def'){
+    html += `<div class="ls-term">${step.term}</div>`;
+    html += `<div class="ls-think">${step.think}</div>`;
+    html += `<div id="lsRevealSlot"></div>`;
+    html += `<div class="ls-controls"><button class="ls-btn-skip" onclick="lsNext()">Skip →</button><button class="ls-btn-prim" id="lsRevealBtn" onclick="lsReveal()">↓ Reveal answer</button></div>`;
+  } else if(step.type === 'theory'){
+    html += `<div class="ls-think">${step.think}</div>`;
+    html += `<div id="lsRevealSlot"></div>`;
+    html += `<div class="ls-controls"><button class="ls-btn-skip" onclick="lsNext()">Skip →</button><button class="ls-btn-prim" id="lsRevealBtn" onclick="lsReveal()">↓ Reveal explanation</button></div>`;
+  } else if(step.type === 'mcq'){
+    html += `<div class="ls-mcq-opts" id="lsMcqOpts">`;
+    const letters = ['A','B','C','D'];
+    step.options.forEach((opt, i) => {
+      html += `<button class="ls-mcq-opt" data-i="${i}" onclick="lsMCQ(${i})"><span class="ls-mcq-opt-letter">${letters[i]}</span><span>${opt}</span></button>`;
+    });
+    html += `</div>`;
+    html += `<div id="lsMcqFb"></div>`;
+    html += `<div class="ls-controls" id="lsMcqCtrl" style="visibility:hidden"><span></span><button class="ls-btn-next" onclick="lsNext()">Next →</button></div>`;
+  } else if(step.type === 'diagram'){
+    html += `<div class="ls-think">${step.think}</div>`;
+    html += `<div class="ls-dgrm">${step.svg}</div>`;
+    html += `<div id="lsRevealSlot"></div>`;
+    html += `<div class="ls-controls"><button class="ls-btn-skip" onclick="lsNext()">Skip →</button><button class="ls-btn-prim" id="lsRevealBtn" onclick="lsReveal()">↓ Reveal explanation</button></div>`;
+  } else if(step.type === 'eval'){
+    html += `<div class="ls-think">${step.think}</div>`;
+    html += `<div id="lsRevealSlot"></div>`;
+    html += `<div class="ls-controls"><button class="ls-btn-skip" onclick="lsNext()">Skip →</button><button class="ls-btn-prim" id="lsRevealBtn" onclick="lsReveal()">↓ Reveal evaluation point</button></div>`;
+  } else if(step.type === 'formula' || step.type === 'tip'){
+    html += step.body;
+    html += `<div class="ls-controls"><span></span><button class="ls-btn-next" onclick="lsNext()">${step.nextLabel || 'Next →'}</button></div>`;
+  } else if(step.type === 'recap'){
+    html += `<p style="font-size:13px;line-height:1.6;color:var(--ink);margin-bottom:10px">${step.body}</p>`;
+    html += `<div class="ls-recap-list">`;
+    step.checks.forEach(c => html += `<div class="ls-recap-item">${c}</div>`);
+    html += `</div>`;
+    html += `<div class="ls-controls"><span></span><button class="ls-btn-next" onclick="lsNext()">I can do these →</button></div>`;
+  } else if(step.type === 'finish'){
+    const pctScore = lsState.mcqTotal ? Math.round(lsState.score / lsState.mcqTotal * 100) : null;
+    html = `
+      <div class="ls-bar">
+        <div class="ls-bar-meta"><b>${total}</b> / ${total} · COMPLETE</div>
+        <div class="ls-bar-track"><div class="ls-bar-fill" style="width:100%"></div></div>
+        <button class="ls-bar-exit" onclick="lsExit()">✕ Exit</button>
+      </div>
+      <div class="ls-step">
+        <div class="ls-finish">
+          <div class="ls-finish-icon">🎓</div>
+          <h2>Lesson complete</h2>
+          <p style="color:var(--mut);font-size:13px;margin-top:6px">${step.topicName}</p>
+          ${lsState.mcqTotal ? `<div class="ls-finish-score">QUICK CHECKS · <b>${lsState.score} / ${lsState.mcqTotal}</b> correct (${pctScore}%)</div>` : ''}
+          <button class="ls-btn-mark" onclick="lsFinishMarkConfident('${step.topicId}')">✓ Mark this topic Confident</button>
+          <div style="margin-top:14px"><button class="ls-btn-skip" onclick="lsExit()">Back to topic</button></div>
+        </div>
+      </div>`;
+  }
+
+  html += `</div>`;
+  document.getElementById('lsView').innerHTML = html;
+}
+
+function lsReveal(){
+  const step = lsState.steps[lsState.idx];
+  const slot = document.getElementById('lsRevealSlot');
+  if(!slot) return;
+  slot.innerHTML = `<div class="ls-reveal">${step.reveal}</div>`;
+  const btn = document.getElementById('lsRevealBtn');
+  if(btn){
+    btn.textContent = 'Next →';
+    btn.classList.remove('ls-btn-prim');
+    btn.classList.add('ls-btn-next');
+    btn.onclick = lsNext;
+  }
+  lsState.revealed = true;
+}
+
+function lsMCQ(i){
+  if(lsState.mcqAnswered) return;
+  const step = lsState.steps[lsState.idx];
+  lsState.mcqAnswered = true;
+  const opts = document.querySelectorAll('#lsMcqOpts .ls-mcq-opt');
+  opts.forEach(o => o.disabled = true);
+  const isCorrect = i === step.correctIdx;
+  opts[step.correctIdx].classList.add('correct');
+  if(!isCorrect) opts[i].classList.add('wrong');
+  if(isCorrect) lsState.score++;
+  const fb = document.getElementById('lsMcqFb');
+  fb.innerHTML = `<div class="ls-mcq-fb ${isCorrect ? 'ok' : 'bad'}"><b>${isCorrect ? '✓ Correct' : '✗ Not quite'}</b>${step.explanation}</div>`;
+  document.getElementById('lsMcqCtrl').style.visibility = 'visible';
+}
+
+function lsNext(){
+  if(lsState.idx < lsState.steps.length - 1){
+    lsState.idx++;
+    lsRender();
+    document.getElementById('tp').scrollTop = 0;
+  }
+}
+
+function lsFinishMarkConfident(id){
+  if(!ST[id]) ST[id] = {status:'none',checks:{}};
+  ST[id].status = 'confident';
+  save();
+  buildSide();
+  lsExit();
+}
+
+// Keyboard: space/enter to reveal or advance, 1-4 for MCQ
+document.addEventListener('keydown', (e) => {
+  if(!document.getElementById('lsView').classList.contains('on')) return;
+  if(e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT') return;
+  const step = lsState.steps[lsState.idx];
+  if(!step) return;
+  if(step.type === 'mcq' && !lsState.mcqAnswered){
+    if(['1','2','3','4'].includes(e.key)){
+      e.preventDefault();
+      const i = parseInt(e.key) - 1;
+      if(i < step.options.length) lsMCQ(i);
+    }
+    return;
+  }
+  if(['def','theory','diagram','eval'].includes(step.type) && !lsState.revealed){
+    if(e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); lsReveal(); }
+  } else {
+    if(e.key === ' ' || e.key === 'Enter' || e.key === 'ArrowRight'){ e.preventDefault(); lsNext(); }
+  }
+});
 
 window.addEventListener('beforeunload', () => {
   try { saveFC(); save(); } catch(e) {}
