@@ -335,6 +335,124 @@ body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-s
 .ls-btn-skip{background:transparent;border:none;color:var(--mut);font-family:'JetBrains Mono',monospace;font-size:9.5px;cursor:pointer;letter-spacing:.4px;padding:6px}
 .ls-btn-skip:hover{color:var(--ink)}
 
+/* PRACTICE MODE */
+.btn-pr{background:rgba(255,90,142,.1);border-color:var(--t1);color:var(--t1)}
+.btn-pr:hover,.btn-pr.on{background:rgba(255,90,142,.22);box-shadow:0 0 12px rgba(255,90,142,.18)}
+.pr-mode{padding:14px 30px 80px;max-width:820px;margin:0 auto}
+.pr-hdr{margin-bottom:20px;text-align:center}
+.pr-hdr h1{font-family:'Fraunces',serif;font-size:32px;font-weight:900;letter-spacing:-.5px}
+.pr-hdr h1 em{font-style:italic;color:var(--t1)}
+.pr-hdr p{color:var(--mut);margin-top:6px;font-size:13px;line-height:1.6;max-width:540px;margin-left:auto;margin-right:auto}
+.pr-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0 22px}
+@media(max-width:780px){.pr-cards{grid-template-columns:1fr}}
+.pr-card{background:linear-gradient(160deg,var(--surf2) 0%,var(--surf3) 100%);border:1px solid var(--bord2);border-radius:10px;padding:18px 20px;cursor:pointer;transition:all .2s;text-align:left}
+.pr-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.25);border-color:var(--t1)}
+.pr-card-ic{font-family:'Fraunces',serif;font-size:32px;color:var(--t1);font-weight:600;font-style:italic;line-height:1;margin-bottom:8px}
+.pr-card h2{font-family:'Fraunces',serif;font-size:18px;font-weight:600;line-height:1.2;margin-bottom:5px}
+.pr-card h2 em{color:var(--t1);font-style:italic}
+.pr-card p{font-size:11.5px;line-height:1.55;color:var(--mut);margin:0}
+.pr-picker{margin-top:16px}
+.pr-picker-lbl{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--mut);letter-spacing:1.2px;text-transform:uppercase;margin-bottom:10px}
+.pr-filt{display:flex;gap:5px;margin-bottom:14px;flex-wrap:wrap}
+.pr-filt button{background:var(--surf3);border:1px solid var(--bord);color:var(--mut);border-radius:5px;padding:5px 11px;font-family:'JetBrains Mono',monospace;font-size:9.5px;cursor:pointer;letter-spacing:.4px}
+.pr-filt button:hover{border-color:var(--t1);color:var(--ink)}
+.pr-filt button.on{background:rgba(255,90,142,.15);border-color:var(--t1);color:var(--t1)}
+.pr-q-list{display:grid;gap:6px;max-height:540px;overflow-y:auto;padding-right:4px}
+.pr-q{background:var(--surf2);border:1px solid var(--bord);border-radius:7px;padding:10px 13px;cursor:pointer;transition:all .15s;display:grid;grid-template-columns:auto 60px 1fr;gap:11px;align-items:start}
+.pr-q:hover{border-color:var(--t1);background:var(--surf3)}
+.pr-q-th{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--t1);font-weight:600;background:var(--surf3);padding:2px 7px;border-radius:4px;letter-spacing:.4px;align-self:start;margin-top:2px}
+.pr-q-mk{font-family:'Fraunces',serif;font-size:18px;color:var(--acc);font-weight:600;line-height:1;text-align:right;padding-top:2px}
+.pr-q-mk small{display:block;font-size:8px;color:var(--mut);font-family:'JetBrains Mono',monospace;font-weight:400;letter-spacing:.4px;text-transform:uppercase;margin-top:2px}
+.pr-q-txt{font-family:'Fraunces',serif;font-style:italic;font-size:13.5px;line-height:1.45;color:var(--ink)}
+.pr-random{margin-top:10px;width:100%;background:rgba(255,90,142,.15);border:1px solid var(--t1);color:var(--t1);border-radius:6px;padding:10px;font-family:'JetBrains Mono',monospace;font-size:10.5px;cursor:pointer;letter-spacing:.5px;transition:all .15s}
+.pr-random:hover{background:rgba(255,90,142,.28)}
+.pr-custom{margin-top:14px;padding:12px;background:var(--surf2);border:1px solid var(--bord);border-radius:7px}
+.pr-custom-lbl{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--mut);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.pr-custom textarea{width:100%;background:var(--surf);border:1px solid var(--bord);border-radius:5px;padding:8px 10px;color:var(--ink);font-family:'Inter',sans-serif;font-size:12px;resize:vertical;min-height:50px;outline:none;line-height:1.5}
+.pr-custom textarea:focus{border-color:var(--t1)}
+.pr-custom-btn{margin-top:8px;background:transparent;border:1px solid var(--bord2);color:var(--mut);border-radius:5px;padding:6px 12px;font-family:'JetBrains Mono',monospace;font-size:9.5px;cursor:pointer;letter-spacing:.4px}
+.pr-custom-btn:hover{border-color:var(--t1);color:var(--t1)}
+
+/* Timed essay bar */
+.pr-bar{position:sticky;top:0;z-index:20;background:var(--surf);border:1px solid var(--bord);border-radius:8px;padding:10px 14px;display:grid;grid-template-columns:auto 1fr auto auto;gap:14px;align-items:center;margin-bottom:14px;box-shadow:0 6px 14px rgba(0,0,0,.25)}
+.pr-bar.warn{border-color:#e89b4a;background:linear-gradient(135deg,var(--surf) 0%,rgba(232,155,74,.08) 100%)}
+.pr-bar.expired{border-color:var(--bad);background:linear-gradient(135deg,var(--surf) 0%,rgba(255,90,106,.12) 100%)}
+.pr-timer{font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:600;color:var(--acc);letter-spacing:.5px;font-variant-numeric:tabular-nums}
+.pr-bar.warn .pr-timer{color:#e89b4a}
+.pr-bar.expired .pr-timer{color:var(--bad)}
+.pr-bar-track{height:4px;background:var(--bord);border-radius:2px;overflow:hidden}
+.pr-bar-fill{height:100%;background:var(--acc);transition:width 1s linear}
+.pr-bar.warn .pr-bar-fill{background:#e89b4a}
+.pr-bar.expired .pr-bar-fill{background:var(--bad)}
+.pr-wc{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--ink);text-align:right;line-height:1.2;font-variant-numeric:tabular-nums}
+.pr-wc b{color:var(--ok);font-weight:600}
+.pr-wc.over b{color:#e89b4a}
+.pr-wc small{display:block;font-size:8.5px;color:var(--mut);letter-spacing:.4px;margin-top:1px}
+.pr-stop{background:rgba(255,90,142,.15);border:1px solid var(--t1);color:var(--t1);border-radius:5px;padding:6px 12px;font-family:'JetBrains Mono',monospace;font-size:9.5px;cursor:pointer;letter-spacing:.4px}
+.pr-stop:hover{background:rgba(255,90,142,.3)}
+.pr-prompt{background:linear-gradient(135deg,var(--surf2) 0%,var(--surf3) 100%);border:1px solid var(--bord2);border-radius:8px;padding:12px 16px;margin-bottom:14px;position:relative}
+.pr-prompt::before{content:'QUESTION';position:absolute;top:-8px;left:14px;background:var(--bg);padding:0 8px;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--t1);letter-spacing:1px;font-weight:600}
+.pr-prompt-txt{font-family:'Fraunces',serif;font-style:italic;font-size:16px;line-height:1.45;color:var(--ink)}
+.pr-prompt-meta{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--mut);letter-spacing:.5px;margin-top:7px;text-transform:uppercase}
+.pr-plan,.pr-essay{background:var(--surf2);border:1px solid var(--bord);border-radius:8px;padding:11px 13px;margin-bottom:10px}
+.pr-plan-lbl{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--mut);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;display:flex;justify-content:space-between;align-items:baseline}
+.pr-plan-lbl small{font-family:'Inter',sans-serif;text-transform:none;letter-spacing:0;color:var(--mut);font-size:10.5px;font-weight:400;font-style:italic}
+.pr-plan textarea{width:100%;background:var(--surf);border:1px solid var(--bord);border-radius:5px;padding:8px 10px;color:var(--ink);font-family:'Inter',sans-serif;font-size:12px;resize:vertical;min-height:70px;outline:none;line-height:1.5}
+.pr-essay textarea{width:100%;background:var(--surf);border:1px solid var(--bord);border-radius:5px;padding:10px 12px;color:var(--ink);font-family:'Inter',sans-serif;font-size:13px;resize:vertical;min-height:380px;outline:none;line-height:1.7}
+.pr-plan textarea:focus,.pr-essay textarea:focus{border-color:var(--t1)}
+.pr-actions{display:flex;justify-content:space-between;gap:8px;margin-top:10px;align-items:center}
+.pr-save-st{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--mut);letter-spacing:.4px}
+.pr-save-st.saved{color:var(--ok)}
+.pr-finish{background:rgba(74,232,160,.15);border:1px solid var(--ok);color:var(--ok);border-radius:6px;padding:8px 16px;font-family:'JetBrains Mono',monospace;font-size:10px;cursor:pointer;letter-spacing:.5px}
+.pr-finish:hover{background:rgba(74,232,160,.28)}
+
+/* Self-mark */
+.pr-mk{background:var(--surf2);border:1px solid var(--bord);border-radius:8px;padding:14px 16px;margin-bottom:10px}
+.pr-mk-lbl{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--mut);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.pr-mk-grade{display:flex;align-items:center;gap:14px;padding:10px 14px;background:var(--surf3);border-radius:7px;margin-bottom:12px}
+.pr-mk-band{font-family:'Fraunces',serif;font-size:40px;font-weight:700;line-height:1;font-style:italic}
+.pr-mk-band.a{color:var(--acc)}
+.pr-mk-band.b{color:var(--info)}
+.pr-mk-band.c{color:#e89b4a}
+.pr-mk-band.d{color:var(--bad)}
+.pr-mk-band-d{flex:1}
+.pr-mk-band-n{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--mut);letter-spacing:.5px;text-transform:uppercase}
+.pr-mk-band-w{font-family:'Fraunces',serif;font-size:15px;color:var(--ink);font-weight:600;margin-top:3px;line-height:1.3}
+.pr-mk-score{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink);font-variant-numeric:tabular-nums}
+.pr-mk-score b{color:var(--acc);font-weight:600}
+.pr-rub{display:grid;gap:6px}
+.pr-rub-item{display:grid;grid-template-columns:24px 1fr auto;gap:11px;align-items:start;padding:9px 12px;background:var(--surf);border:1px solid var(--bord);border-radius:6px;cursor:pointer;transition:all .15s}
+.pr-rub-item:hover{border-color:var(--info)}
+.pr-rub-cb{width:18px;height:18px;border:1.5px solid var(--bord2);border-radius:3px;display:grid;place-items:center;flex-shrink:0;margin-top:1px;transition:all .15s}
+.pr-rub-item.on .pr-rub-cb{background:var(--ok);border-color:var(--ok)}
+.pr-rub-item.on .pr-rub-cb::before{content:'✓';color:#000;font-weight:700;font-size:11px;line-height:1}
+.pr-rub-item.auto .pr-rub-cb{border-style:dashed}
+.pr-rub-item.auto.on .pr-rub-cb{border-style:solid}
+.pr-rub-t{font-size:12.5px;line-height:1.5;color:var(--ink)}
+.pr-rub-t small{display:block;font-size:10.5px;color:var(--mut);font-style:italic;margin-top:2px;line-height:1.45}
+.pr-rub-ao{font-family:'JetBrains Mono',monospace;font-size:8.5px;color:var(--mut);letter-spacing:.4px;background:var(--surf3);padding:2px 6px;border-radius:3px;align-self:start;margin-top:3px}
+.pr-rub-item.on .pr-rub-ao{color:var(--ok);background:rgba(74,232,160,.12)}
+.pr-mk-fb{margin-top:12px;padding-top:10px;border-top:1px dashed var(--bord)}
+.pr-mk-fb-lbl{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--mut);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.pr-mk-fb-item{font-size:11.5px;line-height:1.55;color:var(--ink);padding:5px 0 5px 14px;position:relative;border-bottom:1px dotted var(--bord)}
+.pr-mk-fb-item:last-child{border:none}
+.pr-mk-fb-item::before{content:'•';position:absolute;left:2px;color:var(--t1);font-weight:700}
+.pr-mk-actions{display:flex;gap:8px;margin-top:12px;justify-content:flex-end;flex-wrap:wrap}
+.pr-mk-actions button{background:var(--surf3);border:1px solid var(--bord);color:var(--ink);border-radius:5px;padding:7px 13px;font-family:'JetBrains Mono',monospace;font-size:9.5px;cursor:pointer;letter-spacing:.4px}
+.pr-mk-actions button:hover{border-color:var(--t1)}
+.pr-mk-actions button.prim{background:rgba(255,90,142,.15);border-color:var(--t1);color:var(--t1)}
+.pr-mk-actions button.prim:hover{background:rgba(255,90,142,.28)}
+
+.pr-hist{margin-top:18px}
+.pr-hist-h{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--mut);letter-spacing:1.2px;text-transform:uppercase;margin-bottom:9px;display:flex;justify-content:space-between;align-items:baseline}
+.pr-hist-h b{color:var(--t1)}
+.pr-hist-item{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:9px 12px;background:var(--surf2);border:1px solid var(--bord);border-radius:6px;margin-bottom:5px;cursor:pointer;transition:all .15s}
+.pr-hist-item:hover{border-color:var(--t1);background:var(--surf3)}
+.pr-hist-g{font-family:'Fraunces',serif;font-size:20px;font-weight:700;font-style:italic;line-height:1;width:32px;text-align:center}
+.pr-hist-g.a{color:var(--acc)}.pr-hist-g.b{color:var(--info)}.pr-hist-g.c{color:#e89b4a}.pr-hist-g.d{color:var(--bad)}
+.pr-hist-q{font-family:'Fraunces',serif;font-style:italic;font-size:12.5px;line-height:1.35;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pr-hist-m{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--mut);text-align:right;line-height:1.4}
+
 /* SVG styles */
 .ax{stroke:#6b7590;stroke-width:1.5;fill:none}
 .gr{stroke:#2a2f3d;stroke-width:.5;fill:none}
@@ -392,6 +510,7 @@ body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-s
 <div class="main">
   <div class="top">
     <div class="top-t" id="tt">Select a topic to begin</div>
+    <button class="btn btn-pr" id="prTog" onclick="prOpen()">✏️ Practice</button>
     <button class="btn btn-cf" id="cfTog" onclick="cfOpen()">📋 Exam Craft</button>
     <button class="btn btn-fc" id="fcTog" onclick="fcOpen()">🗂️ Flashcards</button>
     <button class="btn btn-rst" onclick="rst()">↺ Reset</button>
@@ -504,6 +623,9 @@ body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-s
 
       <!-- LESSON VIEW -->
       <div id="lsView" class="ls-mode"></div>
+
+      <!-- PRACTICE VIEW -->
+      <div id="prView" style="display:none"></div>
 
       <!-- EXAM CRAFT VIEW -->
       <div id="cfView" style="display:none">
@@ -3596,6 +3718,498 @@ document.addEventListener('keydown', (e) => {
 window.addEventListener('beforeunload', () => {
   try { saveFC(); save(); } catch(e) {}
 });
+
+// ═══ PRACTICE MODE ═══
+const PROMPTS = [
+  // Theme 1 — micro / market failure
+  {th:'1',mk:25,q:'Evaluate the view that government intervention in markets is always preferable to allowing market failure to persist.'},
+  {th:'1',mk:25,q:'Discuss the case for using indirect taxes to reduce the consumption of demerit goods such as alcohol and tobacco.'},
+  {th:'1',mk:25,q:'Evaluate the extent to which behavioural economics undermines the assumption of consumer rationality.'},
+  {th:'1',mk:25,q:'Evaluate the effectiveness of maximum prices as a method of government intervention in markets.'},
+  {th:'1',mk:25,q:'Discuss whether free markets always lead to the most efficient allocation of resources.'},
+  {th:'1',mk:25,q:'Evaluate the view that the price mechanism is the most effective way of allocating scarce resources.'},
+  {th:'1',mk:25,q:'Discuss the case for and against tradeable pollution permits (such as the EU ETS) as a response to negative externalities.'},
+  {th:'1',mk:12,q:'Examine, with the use of a diagram, the impact of a specific indirect tax on a market where demand is price-inelastic.'},
+  {th:'1',mk:12,q:'Analyse two factors that may cause a contraction in market demand.'},
+  // Theme 2 — macro / UK economy
+  {th:'2',mk:25,q:'Evaluate the use of fiscal policy as a method of reducing unemployment in the UK.'},
+  {th:'2',mk:25,q:'Discuss the view that supply-side policies are the most effective way to achieve long-run economic growth.'},
+  {th:'2',mk:25,q:'Evaluate the impact of quantitative easing on the UK economy since 2009.'},
+  {th:'2',mk:25,q:'Discuss whether GDP is a satisfactory measure of economic performance.'},
+  {th:'2',mk:25,q:'Evaluate the view that low and stable inflation should be the primary macroeconomic objective.'},
+  {th:'2',mk:25,q:'Discuss the impact of automatic stabilisers on the UK economy during economic downturns.'},
+  {th:'2',mk:25,q:'Evaluate the likely effects of a sustained rise in UK interest rates on the macroeconomy.'},
+  {th:'2',mk:12,q:'Analyse two factors that may cause aggregate demand to shift to the right.'},
+  {th:'2',mk:12,q:'With reference to a diagram, examine the impact of a positive output gap on the UK economy.'},
+  // Theme 3 — business / labour market
+  {th:'3',mk:25,q:'Evaluate the view that monopolies are always against the public interest.'},
+  {th:'3',mk:25,q:'Discuss the case for regulating monopsony power in UK labour markets.'},
+  {th:'3',mk:25,q:'Evaluate the effectiveness of price discrimination as a strategy for profit-maximising firms.'},
+  {th:'3',mk:25,q:'Discuss the view that oligopolistic markets always lead to consumer welfare loss.'},
+  {th:'3',mk:25,q:'Evaluate the contestability of UK markets and its impact on incumbent firm behaviour.'},
+  {th:'3',mk:25,q:'Discuss whether business growth always benefits the firm\'s stakeholders.'},
+  {th:'3',mk:12,q:'With the help of a diagram, examine why a profit-maximising monopolist produces below the allocatively efficient level of output.'},
+  {th:'3',mk:12,q:'Analyse the impact of a national minimum wage above the equilibrium wage in a competitive labour market.'},
+  // Theme 4 — global / development
+  {th:'4',mk:25,q:'Evaluate the impact of globalisation on developing economies.'},
+  {th:'4',mk:25,q:'Discuss the view that free trade is more beneficial than protectionism for the UK economy.'},
+  {th:'4',mk:25,q:'Evaluate the use of foreign aid as a strategy for promoting development in low-income economies.'},
+  {th:'4',mk:25,q:'Evaluate the view that fixed exchange rates are preferable to floating exchange rates for emerging economies.'},
+  {th:'4',mk:25,q:'Discuss whether income inequality is an inevitable consequence of economic growth.'},
+  {th:'4',mk:25,q:'Evaluate the macroeconomic effects of a sustained depreciation in the pound sterling.'},
+  {th:'4',mk:25,q:'Discuss the view that the IMF\'s use of conditionality has done more harm than good to developing economies.'},
+  {th:'4',mk:12,q:'Analyse two reasons why a country may run a persistent current account deficit.'},
+  // Synoptic
+  {th:'S',mk:25,q:'Evaluate the use of macroeconomic policy to correct microeconomic market failures.'},
+  {th:'S',mk:25,q:'Discuss the trade-off between economic growth and environmental sustainability.'}
+];
+
+const PR_HIST_KEY = 'econ_pr_hist_v1';
+let prState = {
+  mode: null, // 'picker' | 'essay' | 'mark'
+  prompt: null,
+  startTime: 0,
+  duration: 0,
+  plan: '',
+  essay: '',
+  timer: null,
+  saveTimer: null,
+  rubric: {} // checklist state
+};
+
+function prLoadHistory(){
+  try { const r = localStorage.getItem(PR_HIST_KEY); return r ? JSON.parse(r) : []; }
+  catch(e){ return []; }
+}
+function prSaveHistory(arr){
+  try { localStorage.setItem(PR_HIST_KEY, JSON.stringify(arr.slice(0, 30))); } catch(e){}
+}
+
+function prOpen(){
+  document.getElementById('wel').style.display = 'none';
+  document.getElementById('tc').style.display = 'none';
+  document.getElementById('fcView').style.display = 'none';
+  document.getElementById('cfView').style.display = 'none';
+  const lsv = document.getElementById('lsView');
+  if(lsv && lsv.classList.contains('on')){ lsv.classList.remove('on'); lsv.innerHTML = ''; }
+  document.getElementById('cfTog').classList.remove('on');
+  document.getElementById('fcTog').classList.remove('on');
+  document.getElementById('prTog').classList.add('on');
+  document.getElementById('prView').style.display = 'block';
+  document.getElementById('tt').textContent = 'Practice';
+  prRenderMenu();
+  document.getElementById('tp').scrollTop = 0;
+}
+
+function prClose(){
+  if(prState.timer){ clearInterval(prState.timer); prState.timer = null; }
+  if(prState.saveTimer){ clearInterval(prState.saveTimer); prState.saveTimer = null; }
+  document.getElementById('prView').style.display = 'none';
+  document.getElementById('prView').innerHTML = '';
+  document.getElementById('prTog').classList.remove('on');
+}
+
+function prRenderMenu(){
+  prState.mode = 'picker';
+  let activeTh = 'all';
+  const history = prLoadHistory();
+  const renderList = () => {
+    const filtered = activeTh === 'all' ? PROMPTS : PROMPTS.filter(p => p.th === activeTh);
+    return filtered.map((p, i) => {
+      const origIdx = PROMPTS.indexOf(p);
+      const thLabel = p.th === 'S' ? 'SYNOPTIC' : 'T' + p.th;
+      return `<div class="pr-q" onclick="prStartEssay(${origIdx})">
+        <span class="pr-q-th">${thLabel}</span>
+        <div class="pr-q-mk">${p.mk}<small>marks</small></div>
+        <div class="pr-q-txt">${p.q}</div>
+      </div>`;
+    }).join('');
+  };
+  let html = `<div class="pr-mode">
+    <div class="pr-hdr">
+      <h1>Exam <em>Practice</em></h1>
+      <p>Write a real essay under timed conditions, then self-mark against the Edexcel rubric. The single highest-leverage exam preparation activity.</p>
+    </div>
+    <div class="pr-picker">
+      <div class="pr-picker-lbl">▸ Filter by theme</div>
+      <div class="pr-filt" id="prFilt">
+        <button class="on" data-th="all">ALL (${PROMPTS.length})</button>
+        <button data-th="1">T1 MICRO</button>
+        <button data-th="2">T2 MACRO</button>
+        <button data-th="3">T3 BUSINESS</button>
+        <button data-th="4">T4 GLOBAL</button>
+        <button data-th="S">SYNOPTIC</button>
+      </div>
+      <button class="pr-random" onclick="prRandomQ()">⚂ Pick a random question</button>
+      <div style="margin-top:14px"><div class="pr-picker-lbl">▸ Or choose</div><div class="pr-q-list" id="prQList">${renderList()}</div></div>
+      <div class="pr-custom">
+        <div class="pr-custom-lbl">▸ Or paste a past-paper question</div>
+        <textarea id="prCustomQ" placeholder="Paste any 12-mark or 25-mark question here..."></textarea>
+        <button class="pr-custom-btn" onclick="prStartCustom()">Start with this prompt →</button>
+      </div>
+    </div>`;
+  if(history.length){
+    html += `<div class="pr-hist">
+      <div class="pr-hist-h"><span>Recent attempts</span><b>${history.length} essay${history.length===1?'':'s'}</b></div>`;
+    history.slice(0, 6).forEach((h, i) => {
+      const d = new Date(h.time);
+      const dstr = d.toLocaleDateString('en-GB',{day:'numeric',month:'short'}) + ' · ' + d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+      const gradeClass = h.band[0].toLowerCase();
+      html += `<div class="pr-hist-item" onclick="prReview(${i})">
+        <span class="pr-hist-g ${gradeClass}">${h.band}</span>
+        <span class="pr-hist-q">${h.q}</span>
+        <span class="pr-hist-m">${h.score}/${h.max}<br>${h.words}w · ${dstr}</span>
+      </div>`;
+    });
+    html += `</div>`;
+  }
+  html += `</div>`;
+  document.getElementById('prView').innerHTML = html;
+  document.querySelectorAll('#prFilt button').forEach(b => {
+    b.addEventListener('click', () => {
+      document.querySelectorAll('#prFilt button').forEach(x => x.classList.remove('on'));
+      b.classList.add('on');
+      activeTh = b.dataset.th;
+      document.getElementById('prQList').innerHTML = renderList();
+    });
+  });
+}
+
+function prRandomQ(){
+  const i = Math.floor(Math.random() * PROMPTS.length);
+  prStartEssay(i);
+}
+
+function prStartCustom(){
+  const q = document.getElementById('prCustomQ').value.trim();
+  if(!q) { alert('Paste a question first.'); return; }
+  // Detect mark allocation from "(25)" etc, or default to 25
+  const mkMatch = q.match(/\((\d{1,2})\s*marks?\)/i) || q.match(/\[(\d{1,2})\]/);
+  const mk = mkMatch ? parseInt(mkMatch[1]) : 25;
+  const cleanQ = q.replace(/\(\d+\s*marks?\)/i, '').replace(/\[\d+\]/, '').trim();
+  prStartEssayCustom({th:'?',mk,q:cleanQ});
+}
+
+function prStartEssay(promptIdx){
+  prStartEssayCustom(PROMPTS[promptIdx]);
+}
+
+function prStartEssayCustom(prompt){
+  prState.mode = 'essay';
+  prState.prompt = prompt;
+  prState.startTime = Date.now();
+  // 30 min for 25-mark, 14 min for 12-mark, 10 min otherwise
+  prState.duration = prompt.mk === 25 ? 30 * 60 : prompt.mk === 12 ? 14 * 60 : 10 * 60;
+  prState.plan = '';
+  prState.essay = '';
+  prRenderEssay();
+}
+
+function prRenderEssay(){
+  const p = prState.prompt;
+  const thLabel = p.th === 'S' ? 'SYNOPTIC' : p.th === '?' ? 'CUSTOM' : 'THEME ' + p.th;
+  const targetMin = p.mk === 25 ? '600-900 words' : p.mk === 12 ? '300-450 words' : '200-350 words';
+  document.getElementById('prView').innerHTML = `<div class="pr-mode">
+    <div class="pr-bar" id="prBar">
+      <div class="pr-timer" id="prTimer">--:--</div>
+      <div class="pr-bar-track"><div class="pr-bar-fill" id="prBarFill" style="width:100%"></div></div>
+      <div class="pr-wc" id="prWc"><b>0</b> words<small>target ${targetMin}</small></div>
+      <button class="pr-stop" onclick="prFinishEssay()">⏹ Finish</button>
+    </div>
+    <div class="pr-prompt">
+      <div class="pr-prompt-txt">${p.q}</div>
+      <div class="pr-prompt-meta">${p.mk} marks · ${thLabel} · ${p.mk === 25 ? '30 min recommended' : p.mk === 12 ? '14 min recommended' : 'compact response'}</div>
+    </div>
+    <div class="pr-plan">
+      <div class="pr-plan-lbl">▸ Plan <small>2-3 min · thesis + paragraph topic sentences</small></div>
+      <textarea id="prPlan" placeholder="Thesis: ...&#10;§1 ...&#10;§2 ...&#10;§3 ...&#10;Eval: ...&#10;Conclusion: ..."></textarea>
+    </div>
+    <div class="pr-essay">
+      <div class="pr-plan-lbl">▸ Essay <small>open with definition + thesis, KAA paragraphs, MAGIC TEE evaluation, justified conclusion</small></div>
+      <textarea id="prEssay" placeholder="Type your essay here. Auto-saved every 30 seconds. Use the plan above. Reference data/context. Use a diagram (describe it in [brackets] if you can't draw)..."></textarea>
+    </div>
+    <div class="pr-actions">
+      <span class="pr-save-st" id="prSaveSt">Auto-save in 30s</span>
+      <button class="pr-finish" onclick="prFinishEssay()">Finish &amp; Self-Mark →</button>
+    </div>
+  </div>`;
+
+  const planEl = document.getElementById('prPlan');
+  const essayEl = document.getElementById('prEssay');
+  const wcEl = document.getElementById('prWc');
+  const saveSt = document.getElementById('prSaveSt');
+
+  function countWords(s){ return (s.trim().match(/\S+/g) || []).length; }
+  function updateWc(){
+    const n = countWords(essayEl.value);
+    let inRange = false;
+    if(p.mk === 25) inRange = n >= 600 && n <= 1100;
+    else if(p.mk === 12) inRange = n >= 280 && n <= 500;
+    else inRange = n >= 180 && n <= 400;
+    wcEl.classList.toggle('over', !inRange && n > 0);
+    wcEl.innerHTML = `<b>${n}</b> words<small>target ${targetMin}</small>`;
+    prState.essay = essayEl.value;
+  }
+  essayEl.addEventListener('input', updateWc);
+  planEl.addEventListener('input', () => { prState.plan = planEl.value; });
+
+  // Auto-save indicator + persist via prState (in-memory; final save on finish)
+  if(prState.saveTimer) clearInterval(prState.saveTimer);
+  prState.saveTimer = setInterval(() => {
+    saveSt.textContent = 'Saved ' + new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+    saveSt.classList.add('saved');
+    setTimeout(() => saveSt.classList.remove('saved'), 1500);
+  }, 30000);
+
+  // Timer
+  function tick(){
+    const elapsed = Math.floor((Date.now() - prState.startTime) / 1000);
+    const remain = Math.max(0, prState.duration - elapsed);
+    const mm = Math.floor(remain / 60), ss = remain % 60;
+    document.getElementById('prTimer').textContent = `${String(mm).padStart(2,'0')}:${String(ss).padStart(2,'0')}`;
+    const pct = (remain / prState.duration) * 100;
+    document.getElementById('prBarFill').style.width = pct + '%';
+    const bar = document.getElementById('prBar');
+    bar.classList.remove('warn','expired');
+    if(remain === 0){ bar.classList.add('expired'); clearInterval(prState.timer); prState.timer = null; prFinishEssay(); }
+    else if(remain <= 300) bar.classList.add('warn');
+  }
+  tick();
+  if(prState.timer) clearInterval(prState.timer);
+  prState.timer = setInterval(tick, 1000);
+}
+
+function prFinishEssay(){
+  if(prState.timer){ clearInterval(prState.timer); prState.timer = null; }
+  if(prState.saveTimer){ clearInterval(prState.saveTimer); prState.saveTimer = null; }
+  // Persist current state from textareas (in case event didn't fire)
+  const ee = document.getElementById('prEssay');
+  if(ee) prState.essay = ee.value;
+  const pe = document.getElementById('prPlan');
+  if(pe) prState.plan = pe.value;
+  prRenderSelfMark();
+}
+
+// Auto-detection for rubric items
+function prDetect(essay, prompt){
+  const text = essay.toLowerCase();
+  const wc = (essay.trim().match(/\S+/g) || []).length;
+  const paragraphs = essay.split(/\n\s*\n/).filter(p => p.trim().length > 30).length;
+  // Length check by mark allocation
+  let lengthOk = false;
+  if(prompt.mk === 25) lengthOk = wc >= 600;
+  else if(prompt.mk === 12) lengthOk = wc >= 280;
+  else lengthOk = wc >= 180;
+  // Structure
+  const structureOk = paragraphs >= (prompt.mk === 25 ? 4 : 2);
+  // Diagram reference
+  const diagramOk = /\b(diagram|shifts? (from|to)|s ?→ ?s|ad ?→ ?ad|shown by|as illustrated|figure|graph)\b/.test(text);
+  // Evaluation markers
+  const evalMarkers = ['however','although','depends on','in the long run','short run','magnitude','elasticity','in conclusion','on balance','this assumes','assumption','time period','crowding out','government failure','market failure'];
+  const evalCount = evalMarkers.filter(m => text.includes(m)).length;
+  const evalOk = evalCount >= 3;
+  // Conclusion with judgement
+  const lastPara = essay.split(/\n\s*\n/).filter(p => p.trim().length > 30).slice(-1)[0] || '';
+  const lastL = lastPara.toLowerCase();
+  const conclusionMarkers = ['in conclusion','on balance','overall','therefore','ultimately','to conclude','this depends on'];
+  const conclusionOk = conclusionMarkers.some(m => lastL.includes(m)) && lastPara.length > 80;
+  // Real-world / data reference
+  const dataOk = /\b(uk|us|2008|2020|2022|china|india|germany|brexit|covid|ons|imf|world bank|bank of england|treasury|hmrc|gdp|cpi|rpi|£|\$|%|billion|million)\b/i.test(essay);
+  // Specific scholar / economist
+  const scholarOk = /\b(keynes|friedman|smith|marx|hayek|akerlof|thaler|piketty|ricardo|aquinas|hick|finnis|mill|bentham|harrod|pigou|laffer)\b/i.test(text);
+  return {
+    wordCount: wc, paragraphs,
+    auto: {
+      length: lengthOk,
+      structure: structureOk,
+      diagram: diagramOk,
+      evaluation: evalOk,
+      conclusion: conclusionOk,
+      data: dataOk,
+      scholar: scholarOk
+    }
+  };
+}
+
+// Rubric for 25-mark essay (Edexcel-aligned)
+const RUBRIC_25 = [
+  {key:'length',     label:'Length appropriate (600-900 words)', ao:'AO1', detail:'Long enough to develop chains; not so long it loses focus.', auto:true},
+  {key:'definition', label:'Defined key term(s) from the question', ao:'AO1', detail:'Opening definition is a free AO1 mark.', auto:false},
+  {key:'data',       label:'Referenced extract data or real-world context', ao:'AO2', detail:'Quoted specific figures/cases (UK, 2008, COVID, £X bn, X%, etc).', auto:true},
+  {key:'structure',  label:'4+ developed body paragraphs (KAA structure)', ao:'AO3', detail:'Each paragraph: Knowledge + Application + Analysis chain.', auto:true},
+  {key:'diagram',    label:'Drew (or described) at least one labelled diagram', ao:'AO3', detail:'Axes, curves, equilibria, shifts. Referenced in prose.', auto:true},
+  {key:'chains',     label:'Used logical chains of reasoning, not lists', ao:'AO3', detail:'"X → Y → therefore Z" not bullet points in prose.', auto:false},
+  {key:'evaluation', label:'2+ distinct evaluation points (MAGIC TEE)', ao:'AO4', detail:'Magnitude, Assumptions, Govt failure, Impacts, Conflicts, Time, Elasticity, Externalities.', auto:true},
+  {key:'depth',      label:'Evaluation went beyond "on the other hand"', ao:'AO4', detail:'Each eval point unpacks WHY it matters with a mechanism.', auto:false},
+  {key:'scholar',    label:'Named at least one economist or theory', ao:'AO1', detail:'Keynes, Friedman, Pigou, Smith, etc adds depth and AO1 marks.', auto:true},
+  {key:'conclusion', label:'Justified conclusion with a criterion', ao:'AO4', detail:'Took a side. "Depends on X — under current UK conditions, [verdict]".', auto:true}
+];
+
+const RUBRIC_12 = [
+  {key:'length',     label:'Length appropriate (300-450 words)', ao:'AO1', detail:'Compact but developed.', auto:true},
+  {key:'definition', label:'Defined key term from the question', ao:'AO1', detail:'Opening definition is a quick mark.', auto:false},
+  {key:'data',       label:'Referenced the extract or context', ao:'AO2', detail:'Quoted at least one specific figure or example.', auto:true},
+  {key:'structure',  label:'2 distinct chains of reasoning', ao:'AO3', detail:'Two separate causal chains, not one elaborated point.', auto:true},
+  {key:'diagram',    label:'Drew (or described) a labelled diagram', ao:'AO3', detail:'12-mark questions essentially require a diagram.', auto:true},
+  {key:'chains',     label:'Logical chains, not bullet-point prose', ao:'AO3', detail:'"X → Y → Z" structure throughout.', auto:false}
+];
+
+function prRenderSelfMark(){
+  prState.mode = 'mark';
+  const p = prState.prompt;
+  const essay = prState.essay || '';
+  const detected = prDetect(essay, p);
+  const rubric = p.mk === 25 ? RUBRIC_25 : RUBRIC_12;
+  // Initialise rubric state with auto-detected values
+  prState.rubric = {};
+  rubric.forEach(r => {
+    if(r.auto) prState.rubric[r.key] = !!detected.auto[r.key];
+    else prState.rubric[r.key] = false;
+  });
+  prRenderMarkUI(detected);
+}
+
+function prRenderMarkUI(detected){
+  const p = prState.prompt;
+  const rubric = p.mk === 25 ? RUBRIC_25 : RUBRIC_12;
+  const total = rubric.length;
+  const got = rubric.filter(r => prState.rubric[r.key]).length;
+  const pct = total ? got / total : 0;
+  let band, bandLabel, gradeClass;
+  if(pct >= 0.85){ band = 'A*'; bandLabel = 'Top of band — A★ candidate work'; gradeClass = 'a'; }
+  else if(pct >= 0.70){ band = 'A'; bandLabel = 'Strong A — minor gaps to push to A★'; gradeClass = 'a'; }
+  else if(pct >= 0.55){ band = 'B'; bandLabel = 'Solid B — middle of mark scheme'; gradeClass = 'b'; }
+  else if(pct >= 0.40){ band = 'C'; bandLabel = 'C — missing structural elements'; gradeClass = 'c'; }
+  else { band = 'D/E'; bandLabel = 'Below pass-band expectations'; gradeClass = 'd'; }
+
+  // Generate feedback
+  const fb = [];
+  rubric.forEach(r => {
+    if(!prState.rubric[r.key]){
+      fb.push(`<strong>${r.label}:</strong> ${r.detail}`);
+    }
+  });
+  if(detected.wordCount < (p.mk === 25 ? 600 : p.mk === 12 ? 280 : 180)){
+    fb.unshift(`<strong>Length:</strong> only ${detected.wordCount} words. Bottom-band essays are typically below this length.`);
+  }
+
+  let html = `<div class="pr-mode">
+    <div class="pr-prompt">
+      <div class="pr-prompt-txt">${p.q}</div>
+      <div class="pr-prompt-meta">${p.mk} marks · ${detected.wordCount} words · ${detected.paragraphs} paragraphs</div>
+    </div>
+    <div class="pr-mk">
+      <div class="pr-mk-lbl">▸ Self-mark</div>
+      <div class="pr-mk-grade">
+        <span class="pr-mk-band ${gradeClass}">${band}</span>
+        <div class="pr-mk-band-d">
+          <div class="pr-mk-band-n">Estimated grade band</div>
+          <div class="pr-mk-band-w">${bandLabel}</div>
+        </div>
+        <span class="pr-mk-score"><b>${got}</b>/${total}</span>
+      </div>
+      <div class="pr-rub" id="prRub">`;
+  rubric.forEach(r => {
+    const on = prState.rubric[r.key];
+    const autoCls = r.auto ? ' auto' : '';
+    const onCls = on ? ' on' : '';
+    html += `<div class="pr-rub-item${onCls}${autoCls}" onclick="prToggleRub('${r.key}')">
+      <div class="pr-rub-cb"></div>
+      <div class="pr-rub-t">${r.label}<small>${r.detail}${r.auto ? ' <em style="color:var(--info)">· auto-detected</em>' : ' <em style="color:var(--mut)">· you decide</em>'}</small></div>
+      <span class="pr-rub-ao">${r.ao}</span>
+    </div>`;
+  });
+  html += `</div>`;
+  if(fb.length){
+    html += `<div class="pr-mk-fb">
+      <div class="pr-mk-fb-lbl">▸ To improve</div>`;
+    fb.forEach(f => html += `<div class="pr-mk-fb-item">${f}</div>`);
+    html += `</div>`;
+  }
+  html += `<div class="pr-mk-actions">
+    <button onclick="prRenderMenu()">← New essay</button>
+    <button onclick="prDownloadEssay()">⬇ Download essay</button>
+    <button class="prim" onclick="prSaveAttempt('${band}', ${got}, ${total})">✓ Save attempt</button>
+  </div>
+  </div></div>`;
+  document.getElementById('prView').innerHTML = html;
+}
+
+function prToggleRub(key){
+  prState.rubric[key] = !prState.rubric[key];
+  // Re-render to update grade band live
+  const detected = prDetect(prState.essay || '', prState.prompt);
+  prRenderMarkUI(detected);
+}
+
+function prDownloadEssay(){
+  const p = prState.prompt;
+  const content = `${p.q}\n${'='.repeat(60)}\n\nPLAN:\n${prState.plan || '(none)'}\n\n${'='.repeat(60)}\n\nESSAY:\n${prState.essay || '(empty)'}\n`;
+  const blob = new Blob([content], {type:'text/plain'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `edexcel-essay-${new Date().toISOString().slice(0,10)}.txt`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+function prSaveAttempt(band, score, max){
+  const hist = prLoadHistory();
+  hist.unshift({
+    time: Date.now(),
+    q: prState.prompt.q.length > 90 ? prState.prompt.q.slice(0,87) + '...' : prState.prompt.q,
+    fullQ: prState.prompt.q,
+    th: prState.prompt.th,
+    mk: prState.prompt.mk,
+    essay: prState.essay,
+    plan: prState.plan,
+    words: (prState.essay.trim().match(/\S+/g) || []).length,
+    band, score, max
+  });
+  prSaveHistory(hist);
+  alert(`Saved (${band} band, ${score}/${max})`);
+  prRenderMenu();
+}
+
+function prReview(idx){
+  const hist = prLoadHistory();
+  const item = hist[idx];
+  if(!item) return;
+  prState.mode = 'mark';
+  prState.prompt = { q:item.fullQ, mk:item.mk, th:item.th };
+  prState.essay = item.essay;
+  prState.plan = item.plan;
+  prState.rubric = {};
+  const rubric = item.mk === 25 ? RUBRIC_25 : RUBRIC_12;
+  const detected = prDetect(item.essay, prState.prompt);
+  rubric.forEach(r => { prState.rubric[r.key] = r.auto ? !!detected.auto[r.key] : false; });
+  prRenderMarkUI(detected);
+}
+
+// Hook other view openers to close practice
+const _origLd2 = ld;
+ld = function(id){
+  if(document.getElementById('prView').style.display === 'block'){ prClose(); }
+  _origLd2(id);
+};
+const _origCfOpen = cfOpen;
+cfOpen = function(){
+  if(document.getElementById('prView').style.display === 'block'){ prClose(); }
+  _origCfOpen();
+};
+const _origFcOpen2 = fcOpen;
+fcOpen = function(){
+  if(document.getElementById('prView').style.display === 'block'){ prClose(); }
+  _origFcOpen2();
+};
+const _origLsStart = lsStart;
+lsStart = function(id){
+  if(document.getElementById('prView').style.display === 'block'){ prClose(); }
+  _origLsStart(id);
+};
 
 // INIT — call AFTER all TOPICS are pushed
 buildSide();
