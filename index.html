@@ -228,6 +228,52 @@ body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-s
 .fc-done-st-l{font-size:9px;color:var(--mut);font-family:'JetBrains Mono',monospace;letter-spacing:.4px;display:block;margin-top:3px;text-transform:uppercase}
 .btn-fc{background:rgba(245,200,66,.1);border-color:var(--acc);color:var(--acc)}
 .btn-fc:hover,.btn-fc.on{background:rgba(245,200,66,.2);box-shadow:0 0 12px rgba(245,200,66,.15)}
+.btn-cf{background:rgba(255,159,90,.1);border-color:#ff9f5a;color:#ff9f5a}
+.btn-cf:hover,.btn-cf.on{background:rgba(255,159,90,.22);box-shadow:0 0 12px rgba(255,159,90,.18)}
+
+/* EXAM CRAFT */
+.cf-mode{padding:14px 30px 60px;max-width:780px;margin:0 auto}
+.cf-hdr{margin-bottom:18px;text-align:center}
+.cf-hdr h1{font-family:'Fraunces',serif;font-size:32px;font-weight:900;letter-spacing:-.5px}
+.cf-hdr h1 em{font-style:italic;color:#ff9f5a}
+.cf-hdr p{color:var(--mut);margin-top:6px;font-size:13px;line-height:1.6}
+.cf-nav{display:flex;gap:4px;background:var(--surf);border:1px solid var(--bord);border-radius:8px;padding:5px;margin:18px 0 22px;overflow-x:auto}
+.cf-nav button{flex:1;min-width:auto;background:transparent;border:none;color:var(--mut);font-family:'JetBrains Mono',monospace;font-size:9.5px;cursor:pointer;padding:8px 9px;border-radius:5px;letter-spacing:.4px;white-space:nowrap;transition:all .15s}
+.cf-nav button:hover{color:var(--ink)}
+.cf-nav button.on{background:rgba(255,159,90,.16);color:#ff9f5a}
+.cf-section{display:none}
+.cf-section.on{display:block}
+.cf-intro{font-size:13px;line-height:1.65;color:var(--ink);background:var(--surf2);border-left:2px solid #ff9f5a;border-radius:0 7px 7px 0;padding:11px 16px;margin-bottom:18px}
+.cf-card{background:var(--surf2);border:1px solid var(--bord);border-radius:8px;padding:14px 16px;margin-bottom:10px}
+.cf-card-h{font-family:'Fraunces',serif;font-size:15px;font-weight:600;color:#ff9f5a;margin-bottom:6px;line-height:1.25;display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.cf-card-h .cf-tag{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--mut);background:var(--surf3);padding:2px 7px;border-radius:4px;font-weight:500;letter-spacing:.5px}
+.cf-card p{font-size:12.5px;line-height:1.65;color:var(--ink);margin-bottom:6px}
+.cf-card p:last-child{margin-bottom:0}
+.cf-card strong{color:var(--acc);font-weight:600}
+.cf-card ul,.cf-card ol{margin:6px 0 6px 18px}
+.cf-card li{font-size:12.5px;line-height:1.6;margin-bottom:3px;color:var(--ink)}
+.cf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:18px}
+@media(max-width:780px){.cf-grid{grid-template-columns:1fr}}
+.cf-paper{background:var(--surf2);border:1px solid var(--bord);border-radius:8px;padding:13px 14px;border-top:3px solid #ff9f5a}
+.cf-paper-n{font-family:'JetBrains Mono',monospace;font-size:9px;color:#ff9f5a;letter-spacing:1.5px;margin-bottom:4px}
+.cf-paper-t{font-family:'Fraunces',serif;font-size:15px;font-weight:600;line-height:1.2;margin-bottom:6px}
+.cf-paper-m{font-size:11px;color:var(--mut);line-height:1.55}
+.cf-paper-m b{color:var(--ink);font-weight:500}
+.cf-q{background:var(--surf2);border:1px solid var(--bord);border-radius:8px;padding:12px 14px;margin-bottom:8px;display:grid;grid-template-columns:60px 1fr;gap:12px;align-items:start}
+.cf-q-mk{font-family:'Fraunces',serif;font-size:24px;color:#ff9f5a;font-weight:700;line-height:1;text-align:right;padding-top:2px}
+.cf-q-mk small{display:block;font-size:9px;color:var(--mut);font-family:'JetBrains Mono',monospace;font-weight:400;letter-spacing:.5px;margin-top:3px;text-transform:uppercase}
+.cf-q-body h4{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--acc);text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px}
+.cf-q-body p{font-size:12px;line-height:1.6;color:var(--ink);margin:3px 0}
+.cf-q-body .cf-q-tmpl{font-family:'Fraunces',serif;font-style:italic;font-size:12.5px;color:var(--mut);line-height:1.55;background:var(--surf3);border-radius:5px;padding:6px 10px;margin-top:5px}
+.cf-ao{background:var(--surf2);border:1px solid var(--bord);border-radius:8px;padding:12px 14px;margin-bottom:8px;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:start}
+.cf-ao-id{font-family:'Fraunces',serif;font-size:22px;color:var(--info);font-weight:700;line-height:1}
+.cf-ao-body h4{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--ink);letter-spacing:.5px;margin-bottom:3px}
+.cf-ao-body p{font-size:11.5px;line-height:1.55;color:var(--ink);margin:2px 0}
+.cf-ao-body p em{color:var(--mut);font-style:italic}
+.cf-ao-pct{font-family:'Fraunces',serif;font-size:17px;color:var(--acc);font-weight:600;text-align:right}
+.cf-ao-pct small{display:block;font-size:8.5px;color:var(--mut);font-family:'JetBrains Mono',monospace;font-weight:400;letter-spacing:.4px;margin-top:1px}
+.cf-pit{background:rgba(255,90,106,.06);border-left:2px solid var(--bad);border-radius:0 7px 7px 0;padding:9px 14px;margin-bottom:7px;font-size:12px;line-height:1.6;color:var(--ink)}
+.cf-pit b{color:var(--bad);font-weight:600;display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.6px;text-transform:uppercase;margin-bottom:3px}
 
 /* SVG styles */
 .ax{stroke:#6b7590;stroke-width:1.5;fill:none}
@@ -286,6 +332,7 @@ body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-s
 <div class="main">
   <div class="top">
     <div class="top-t" id="tt">Select a topic to begin</div>
+    <button class="btn btn-cf" id="cfTog" onclick="cfOpen()">📋 Exam Craft</button>
     <button class="btn btn-fc" id="fcTog" onclick="fcOpen()">🗂️ Flashcards</button>
     <button class="btn btn-rst" onclick="rst()">↺ Reset</button>
   </div>
@@ -392,6 +439,26 @@ body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-s
               <button class="fc-go" onclick="fcRestart()">New Session</button>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- EXAM CRAFT VIEW -->
+      <div id="cfView" style="display:none">
+        <div class="cf-mode">
+          <div class="cf-hdr">
+            <h1>Exam <em>Craft</em></h1>
+            <p>Everything the spec assumes you already know about how Edexcel A Level Economics A is actually marked.</p>
+          </div>
+          <div class="cf-nav" id="cfNav">
+            <button class="on" data-sec="papers">PAPERS</button>
+            <button data-sec="qtypes">QUESTION TYPES</button>
+            <button data-sec="essay">25-MARK ESSAY</button>
+            <button data-sec="aos">AOs</button>
+            <button data-sec="mistakes">MISTAKES</button>
+            <button data-sec="timing">TIMING</button>
+            <button data-sec="diagrams">DIAGRAMS</button>
+          </div>
+          <div id="cfContent"></div>
         </div>
       </div>
     </div>
@@ -2928,7 +2995,163 @@ ld = function(id){
   if(document.getElementById('fcView').style.display === 'block'){
     fcClose();
   }
+  if(document.getElementById('cfView').style.display === 'block'){
+    cfClose();
+  }
   _origLd(id);
+};
+
+// ═══ EXAM CRAFT ═══
+const CRAFT = {
+  papers: {
+    intro: 'Edexcel A Level Economics A has three 2-hour papers. Each carries 100 marks. Papers 1 and 2 are theme-paired; Paper 3 is synoptic. Pure totals: 35% + 35% + 30%.',
+    items: [
+      {n:'01',t:'Markets & Business Behaviour',m:'<b>Themes 1 + 3</b> · 100 marks · 2hr · 35% of A Level<br><br>Section A: data response (50 marks). Section B: data response (50 marks). Both sections include a 25-mark essay choice.<br><br>Focus: microeconomics, market failure, firm behaviour, labour market, government intervention.'},
+      {n:'02',t:'National & Global Economy',m:'<b>Themes 2 + 4</b> · 100 marks · 2hr · 35% of A Level<br><br>Same structure as Paper 1: two 50-mark data response sections, each with a 25-mark essay choice.<br><br>Focus: macro indicators, AD/AS, policy, trade, development, finance.'},
+      {n:'03',t:'Microeconomics & Macroeconomics',m:'<b>Synoptic · all 4 themes</b> · 100 marks · 2hr · 30% of A Level<br><br>Two data response questions (50 marks each), each containing a 25-mark essay.<br><br>Cross-theme application. Examiners reward synoptic links — micro tools applied to macro problems and vice versa.'}
+    ]
+  },
+  qtypes: {
+    intro: 'Each mark allocation has a specific command verb and scaffold. The examiner is looking for AO-specific moves. Hit the AOs the question is rewarding; ignore the others.',
+    items: [
+      {mk:'4',v:'Define / Knowledge',ao:'AO1',tmpl:'1 sentence definition + 1 sentence applying it to context. Add an example if space.',time:'4 min'},
+      {mk:'5',v:'Calculate',ao:'AO1 + AO2',tmpl:'Show working. Method marks awarded even with wrong final answer. State units. Round only at the end.',time:'5 min'},
+      {mk:'8',v:'Explain',ao:'AO1 + AO2 + AO3',tmpl:'Define key term + Apply to extract + 1 developed chain of reasoning. No evaluation needed.',time:'8 min'},
+      {mk:'10',v:'Examine / Analyse',ao:'AO1 + AO2 + AO3',tmpl:'2 chains of reasoning, each with KAA structure. Use a diagram if possible. Reference the data.',time:'12 min'},
+      {mk:'12',v:'Analyse with diagram',ao:'AO2 + AO3 (diagram is AO3)',tmpl:'Drawn AND labelled diagram + 2 developed chains. Refer to diagram in prose ("as shown by the shift from S to S₁…").',time:'14 min'},
+      {mk:'15',v:'Evaluate (compact)',ao:'All four AOs',tmpl:'1-2 analysis points + 2 evaluation points + brief justified conclusion. No intro needed.',time:'18 min'},
+      {mk:'25',v:'Evaluate (essay)',ao:'All four AOs evenly',tmpl:'Brief intro + 2-3 analysis paragraphs (KAA + diagram) + 2-3 evaluation paragraphs + justified conclusion with judgement criterion.',time:'30 min'}
+    ]
+  },
+  essay: {
+    intro: 'The 25-mark essay carries 25% of paper marks but disproportionate grade impact. Examiners want commitment, depth, diagrams, and a justified verdict. Vanilla "on the other hand" answers cap at C.',
+    structure: [
+      {h:'1. Introduction (1-2 min · 50-80 words)',p:'Define the key term in the question. Briefly state your line of argument (your thesis). Skip background context — go straight to the argument. <strong>One mark</strong> for definition.'},
+      {h:'2. First analysis paragraph (4-5 min · 100-130 words)',p:'<strong>K</strong>nowledge: state economic concept. <strong>A</strong>pplication: link to context. <strong>A</strong>nalysis: chain of reasoning with logical connectives ("this leads to… which causes… therefore…"). Draw a labelled diagram and reference it. End with a mini-conclusion ("this suggests X").'},
+      {h:'3. Second analysis paragraph (4-5 min)',p:'Same KAA structure but a DIFFERENT angle. Diagram if it adds value. Avoid repeating the first paragraph\'s logic.'},
+      {h:'4. (Optional) Third analysis paragraph',p:'Only if you have time and a distinct point. Better one strong paragraph than three weak ones.'},
+      {h:'5. First evaluation point (4-5 min · 100-120 words)',p:'Question an assumption: <strong>magnitude</strong> (how big is the effect?), <strong>time</strong> (short vs long run), <strong>elasticity</strong>, <strong>likelihood</strong>, <strong>alternative explanation</strong>. Not just "but it depends" — give a specific reason it depends.'},
+      {h:'6. Second evaluation point (4-5 min)',p:'Different evaluation type from #5. Apply MAGIC TEE: <strong>M</strong>agnitude, <strong>A</strong>ssumptions, <strong>G</strong>overnment failure, <strong>I</strong>mpacts (winners/losers), <strong>C</strong>onflicts (objectives), <strong>T</strong>ime, <strong>E</strong>lasticity, <strong>E</strong>xternalities.'},
+      {h:'7. Justified conclusion (3-4 min · 80-120 words)',p:'Take a side. State your judgement (yes/no/depends on X). Give a <strong>justification criterion</strong> ("this depends on whether [specific condition] holds — given current UK conditions, [your verdict]"). No new content. End decisively.'}
+    ],
+    magic: 'MAGIC TEE evaluation framework: <strong>M</strong>agnitude · <strong>A</strong>ssumptions · <strong>G</strong>overnment failure · <strong>I</strong>mpacts (winners/losers) · <strong>C</strong>onflicts (between objectives) · <strong>T</strong>ime period · <strong>E</strong>lasticity · <strong>E</strong>xternalities. Hit 2-3 of these in any 25-marker.'
+  },
+  aos: {
+    intro: 'Edexcel uses four Assessment Objectives. Each question targets specific AOs. A★ answers nail the AOs the question rewards — no wasted prose on AOs the question isn\'t asking for.',
+    items: [
+      {id:'AO1',pct:'20%',t:'Knowledge & Understanding',w:'Definitions, theory, factual recall. Use precise terminology.',e:'Saying "demand contracts" not "demand falls". Naming "Pigouvian tax" not "tax to fix externalities". Quoting "CPI target is 2% ±1pp" with the institutional source.'},
+      {id:'AO2',pct:'20%',t:'Application',w:'Using the data/context given in the question. Quote extract figures. Name the specific firm/country/policy.',e:'"As shown in Extract 1, UK CPI rose to 11.1% in October 2022…" not "inflation has been rising recently".'},
+      {id:'AO3',pct:'30%',t:'Analysis',w:'Chains of reasoning. Logical connectives. Diagrams. Cause → effect → effect.',e:'"A specific tax → MC↑ → SRAS shifts left → equilibrium PL rises and Y falls (shown by the shift from SRAS to SRAS₁) → cost-push inflation → real wages fall."'},
+      {id:'AO4',pct:'30%',t:'Evaluation',w:'Judgement, weighing alternatives, prioritising, justified conclusion. The hardest AO. Where A* is won.',e:'"However, the magnitude depends on PED — for inelastic demand like cigarettes (PED ≈ -0.4), Q falls only 4% for a 10% price rise, so the policy raises revenue more than it reduces harm. Therefore [verdict]."'}
+    ]
+  },
+  mistakes: {
+    intro: 'The pet hates of Edexcel examiners. Each of these costs marks every paper. Most are easy to avoid if you know about them.',
+    items: [
+      {t:'Saying "demand rises" when you mean "Qd extends"',d:'Demand only changes when the curve SHIFTS. Movement along is extension/contraction of Qd or Qs. Examiners deduct for this every single time. Drilled into mark schemes.'},
+      {t:'No diagram on a 12+ mark question',d:'12-mark questions essentially demand a diagram. 25-mark essays do too. Missing a diagram costs ~3 marks and signals to the examiner you\'re a B candidate.'},
+      {t:'Unlabelled axes',d:'P/Q axes on every micro diagram. PL/Y on macro. Mark points with letters. Show the shift with an arrow. Reference the diagram in prose.'},
+      {t:'Generic evaluation ("on the other hand")',d:'"On the other hand X might happen" is filler. Be specific: WHY might X happen? Under WHAT conditions? Examiners reward the underlying mechanism, not the phrase.'},
+      {t:'Fence-sitting conclusion',d:'"There are arguments on both sides" is a refusal to conclude. Take a side. Justify with a criterion. A★ candidates commit.'},
+      {t:'Repeating the extract',d:'AO2 means USING the extract, not COPYING it. Quote a specific figure, then ADD something the extract doesn\'t say.'},
+      {t:'Listing without chaining',d:'"This causes inflation, unemployment, BoP issues" with no causal chain = bullet points in prose. Build ONE chain deeply, not three shallowly.'},
+      {t:'Memorised essay templates',d:'A pre-prepared essay that doesn\'t answer THIS question caps at C. The question wording matters — "to what extent", "discuss", "evaluate" each demand different structures.'},
+      {t:'Wrong real-world examples',d:'Better one accurate UK example (2008 GFC, 2020 furlough, 2022 energy cap) than three vague ones. If you don\'t know the date or magnitude, paraphrase.'},
+      {t:'Running out of time on the 25-marker',d:'A rushed essay finishes below its body. Plan for the conclusion. Set a 5-min warning before time\'s up.'}
+    ]
+  },
+  timing: {
+    intro: 'Each Edexcel paper is 100 marks in 120 minutes — roughly 1 mark per 1.1 minutes, leaving ~10 min slack. Use the slack for planning and a final pass, not for one over-long essay.',
+    items: [
+      {h:'Per-question allocation',p:'Allocate <strong>1.1 minutes per mark</strong>. A 25-mark essay = 27 min. An 8-mark question = 9 min. A 4-mark question = 4-5 min. Discipline matters more than perfection.'},
+      {h:'The first 5 minutes',p:'Read both data response questions. Pick which 25-mark essay you\'ll answer. Underline command verbs and data figures you\'ll use. Don\'t start writing yet.'},
+      {h:'Planning the essay (3-4 min)',p:'Bullet your thesis, 2-3 analysis points, 2-3 evaluation points, conclusion criterion. A plan saves more time than it costs. Unplanned essays drift.'},
+      {h:'Watch the clock',p:'After every major question, check time vs marks done. Behind? Speed up — cut a paragraph short, not the conclusion. Ahead? Don\'t pad — go check earlier work.'},
+      {h:'The last 3 minutes',p:'Quick read-through. Add missing diagram labels. Tighten a vague conclusion. Add a specific figure if you missed quoting one.'},
+      {h:'If you run out of time',p:'Bullet-point the remaining content. Markers can award partial credit for bulleted points showing the right understanding. They cannot mark blank pages.'}
+    ]
+  },
+  diagrams: {
+    intro: 'Diagrams are AO3 marks and the fastest way to demonstrate understanding. Every relevant question should have one. Drawn neatly, fully labelled, and referenced in prose.',
+    items: [
+      {h:'The non-negotiables (every diagram)',p:'1. Labelled axes (P/Q for micro, PL/Y for macro).<br>2. Original curves labelled (S, D, AD, AS, MC, etc.).<br>3. Original equilibrium marked (P*, Q* with dashed lines to axes).<br>4. New curves labelled with subscripts (S₁, AD₁).<br>5. New equilibrium marked (P₁, Q₁ with dashed lines).<br>6. Arrow showing the shift direction.<br>7. Referenced in prose ("as shown by the shift from S to S₁").'},
+      {h:'The 8 diagrams you must be able to draw perfectly',p:'<strong>Micro:</strong> Supply/demand with tax/subsidy/shift. Externality (production OR consumption). Monopoly with DWL. Monopsony labour market. PPF.<br><strong>Macro:</strong> AD/AS short-run shift. AD/AS long-run (Classical and Keynesian LRAS). Phillips Curve (SRPC and vertical LRPC).'},
+      {h:'Diagram shortcuts that lose marks',p:'• Curves drawn as straight lines without thought (MC should be U-shaped, not linear).<br>• Missing the DWL triangle on monopoly/tax diagrams.<br>• Wrong gradient on tax diagrams (specific = parallel shift, ad valorem = pivot).<br>• PPF drawn as straight line (should be concave to show increasing opportunity cost).<br>• LRAS drawn as horizontal in Classical model (should be vertical at Yf).'},
+      {h:'How to reference your diagram',p:'After drawing, state: <em>"As shown in the diagram, the imposition of the tax shifts supply from S to S+tax, raising equilibrium price from P* to Pb and reducing quantity from Q* to Q₁. The deadweight loss is shown by the red triangle."</em> Three sentences of prose reference earn the AO3 mark the diagram alone might not.'}
+    ]
+  }
+};
+
+function cfOpen(){
+  document.getElementById('wel').style.display = 'none';
+  document.getElementById('tc').style.display = 'none';
+  document.getElementById('fcView').style.display = 'none';
+  document.getElementById('cfView').style.display = 'block';
+  document.getElementById('cfTog').classList.add('on');
+  document.getElementById('fcTog').classList.remove('on');
+  document.getElementById('tt').textContent = 'Exam Craft';
+  cfRender('papers');
+  document.getElementById('tp').scrollTop = 0;
+}
+
+function cfClose(){
+  document.getElementById('cfView').style.display = 'none';
+  document.getElementById('cfTog').classList.remove('on');
+}
+
+function cfRender(sec){
+  document.querySelectorAll('#cfNav button').forEach(b => b.classList.toggle('on', b.dataset.sec === sec));
+  const c = CRAFT[sec];
+  let html = `<div class="cf-intro">${c.intro}</div>`;
+  if(sec === 'papers'){
+    html += `<div class="cf-grid">`;
+    c.items.forEach(p => {
+      html += `<div class="cf-paper"><div class="cf-paper-n">PAPER ${p.n}</div><div class="cf-paper-t">${p.t}</div><div class="cf-paper-m">${p.m}</div></div>`;
+    });
+    html += `</div>`;
+  } else if(sec === 'qtypes'){
+    c.items.forEach(q => {
+      html += `<div class="cf-q"><div class="cf-q-mk">${q.mk}<small>marks</small></div><div class="cf-q-body"><h4>${q.v} <span style="color:var(--mut);font-weight:400;text-transform:none;letter-spacing:0">· ${q.ao} · ${q.time}</span></h4><div class="cf-q-tmpl">${q.tmpl}</div></div></div>`;
+    });
+  } else if(sec === 'essay'){
+    c.structure.forEach(s => {
+      html += `<div class="cf-card"><div class="cf-card-h">${s.h}</div><p>${s.p}</p></div>`;
+    });
+    html += `<div class="cf-card" style="border-color:#ff9f5a;background:rgba(255,159,90,.06)"><div class="cf-card-h" style="color:#ff9f5a">⚡ MAGIC TEE</div><p>${c.magic}</p></div>`;
+  } else if(sec === 'aos'){
+    c.items.forEach(a => {
+      html += `<div class="cf-ao"><div class="cf-ao-id">${a.id}</div><div class="cf-ao-body"><h4>${a.t}</h4><p>${a.w}</p><p><em>Example:</em> ${a.e}</p></div><div class="cf-ao-pct">${a.pct}<small>of marks</small></div></div>`;
+    });
+  } else if(sec === 'mistakes'){
+    c.items.forEach(m => {
+      html += `<div class="cf-pit"><b>✗ ${m.t}</b>${m.d}</div>`;
+    });
+  } else if(sec === 'timing'){
+    c.items.forEach(t => {
+      html += `<div class="cf-card"><div class="cf-card-h">${t.h}</div><p>${t.p}</p></div>`;
+    });
+  } else if(sec === 'diagrams'){
+    c.items.forEach(d => {
+      html += `<div class="cf-card"><div class="cf-card-h">${d.h}</div><p>${d.p}</p></div>`;
+    });
+  }
+  document.getElementById('cfContent').innerHTML = html;
+}
+
+// Wire up nav
+document.addEventListener('click', (e) => {
+  if(e.target.matches('#cfNav button')){
+    cfRender(e.target.dataset.sec);
+  }
+});
+
+// Hook flashcard open to close craft view
+const _origFcOpen = fcOpen;
+fcOpen = function(){
+  if(document.getElementById('cfView').style.display === 'block'){
+    cfClose();
+  }
+  _origFcOpen();
 };
 
 window.addEventListener('beforeunload', () => {
