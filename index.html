@@ -416,6 +416,54 @@ body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-s
 .ls-btn-skip{background:transparent;border:none;color:var(--mut);font-family:'JetBrains Mono',monospace;font-size:9.5px;cursor:pointer;letter-spacing:.4px;padding:6px}
 .ls-btn-skip:hover{color:var(--ink)}
 
+/* TOOLKIT (calculators) */
+.btn-tk{background:rgba(74,232,160,.1);border-color:var(--ok);color:var(--ok)}
+.btn-tk:hover,.btn-tk.on{background:rgba(74,232,160,.22);box-shadow:0 0 12px rgba(74,232,160,.18)}
+.tk-mode{padding:14px 30px 80px;max-width:820px;margin:0 auto}
+.tk-hdr{margin-bottom:18px;text-align:center}
+.tk-hdr h1{font-family:'Fraunces',serif;font-size:32px;font-weight:900;letter-spacing:-.5px}
+.tk-hdr h1 em{font-style:italic;color:var(--ok)}
+.tk-hdr p{color:var(--mut);margin-top:6px;font-size:13px;line-height:1.6;max-width:540px;margin-left:auto;margin-right:auto}
+.tk-nav{display:flex;gap:4px;background:var(--surf);border:1px solid var(--bord);border-radius:8px;padding:5px;margin:18px 0 22px;overflow-x:auto}
+.tk-nav button{flex:1;min-width:70px;background:transparent;border:none;color:var(--mut);font-family:'JetBrains Mono',monospace;font-size:9.5px;cursor:pointer;padding:8px 9px;border-radius:5px;letter-spacing:.4px;white-space:nowrap;transition:all .15s}
+.tk-nav button:hover{color:var(--ink)}
+.tk-nav button.on{background:rgba(74,232,160,.16);color:var(--ok)}
+.tk-card{background:var(--surf2);border:1px solid var(--bord);border-radius:10px;padding:18px 20px}
+.tk-title{font-family:'Fraunces',serif;font-size:22px;font-weight:600;color:var(--ink);margin-bottom:5px;line-height:1.2}
+.tk-title em{color:var(--ok);font-style:italic}
+.tk-blurb{font-size:12px;color:var(--mut);line-height:1.55;margin-bottom:14px}
+.tk-formula{background:linear-gradient(180deg,var(--surf3) 0%,var(--surf) 100%);border:1px solid var(--bord2);border-radius:6px;padding:11px 16px;font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--ok);text-align:center;letter-spacing:.5px;margin-bottom:14px}
+.tk-inputs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+@media(max-width:640px){.tk-inputs{grid-template-columns:1fr}}
+.tk-in{display:flex;flex-direction:column;gap:4px}
+.tk-in label{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--mut);letter-spacing:.4px;text-transform:uppercase}
+.tk-in-row{display:flex;background:var(--surf);border:1px solid var(--bord);border-radius:6px;overflow:hidden;transition:border-color .15s}
+.tk-in-row:focus-within{border-color:var(--ok)}
+.tk-in-row .unit{padding:8px 10px;background:var(--surf3);color:var(--mut);font-family:'JetBrains Mono',monospace;font-size:12px;border-right:1px solid var(--bord)}
+.tk-in-row input{flex:1;background:transparent;border:none;padding:8px 10px;color:var(--ink);font-family:'Inter',sans-serif;font-size:13px;outline:none;font-variant-numeric:tabular-nums;min-width:0}
+.tk-in-row input:invalid{color:var(--bad)}
+.tk-actions{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tk-btn{background:rgba(74,232,160,.15);border:1px solid var(--ok);color:var(--ok);border-radius:6px;padding:8px 14px;font-family:'JetBrains Mono',monospace;font-size:10px;cursor:pointer;letter-spacing:.5px;transition:all .15s}
+.tk-btn:hover{background:rgba(74,232,160,.28)}
+.tk-btn-sec{background:transparent;border:1px solid var(--bord2);color:var(--mut);border-radius:6px;padding:8px 14px;font-family:'JetBrains Mono',monospace;font-size:10px;cursor:pointer;letter-spacing:.5px;transition:all .15s}
+.tk-btn-sec:hover{border-color:var(--ok);color:var(--ok)}
+.tk-out{display:none}
+.tk-out.on{display:block;animation:tkIn .2s ease-out}
+@keyframes tkIn{from{opacity:0;transform:translateY(4px)}to{opacity:1}}
+.tk-result{background:linear-gradient(160deg,rgba(74,232,160,.08),rgba(74,200,232,.05));border:1px solid var(--ok);border-radius:8px;padding:14px 16px;margin-bottom:10px}
+.tk-result-lbl{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--ok);letter-spacing:1.2px;text-transform:uppercase;margin-bottom:4px;font-weight:600}
+.tk-result-val{font-family:'Fraunces',serif;font-size:34px;font-weight:700;color:var(--ok);line-height:1;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+.tk-result-val em{font-style:italic}
+.tk-result-val small{font-size:14px;color:var(--mut);font-weight:400;margin-left:6px}
+.tk-work{background:var(--surf);border:1px solid var(--bord);border-radius:7px;padding:11px 14px;margin-bottom:10px}
+.tk-work-lbl{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--mut);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.tk-work-step{font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.7;color:var(--ink);font-variant-numeric:tabular-nums}
+.tk-work-step + .tk-work-step{border-top:1px dashed var(--bord);padding-top:5px;margin-top:5px}
+.tk-interp{background:rgba(245,200,66,.06);border-left:2px solid var(--acc);border-radius:0 7px 7px 0;padding:10px 14px;font-size:12.5px;line-height:1.65;color:var(--ink)}
+.tk-interp b{color:var(--acc);font-weight:600;display:block;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.7px;text-transform:uppercase;margin-bottom:3px}
+.tk-interp strong{color:var(--acc);font-weight:600}
+.tk-err{background:rgba(255,90,106,.06);border-left:2px solid var(--bad);border-radius:0 7px 7px 0;padding:10px 14px;font-size:12.5px;line-height:1.6;color:var(--bad)}
+
 /* PRACTICE MODE */
 .btn-pr{background:rgba(255,90,142,.1);border-color:var(--t1);color:var(--t1)}
 .btn-pr:hover,.btn-pr.on{background:rgba(255,90,142,.22);box-shadow:0 0 12px rgba(255,90,142,.18)}
@@ -592,6 +640,7 @@ body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-s
   <div class="top">
     <div class="top-t" id="tt">Select a topic to begin</div>
     <button class="btn btn-pr" id="prTog" onclick="prOpen()">✏️ Practice</button>
+    <button class="btn btn-tk" id="tkTog" onclick="tkOpen()">🧮 Toolkit</button>
     <button class="btn btn-cf" id="cfTog" onclick="cfOpen()">📋 Exam Craft</button>
     <button class="btn btn-fc" id="fcTog" onclick="fcOpen()">🗂️ Flashcards</button>
     <button class="btn btn-rst" onclick="rst()">↺ Reset</button>
@@ -698,6 +747,9 @@ body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-s
 
       <!-- PRACTICE VIEW -->
       <div id="prView" style="display:none"></div>
+
+      <!-- TOOLKIT VIEW -->
+      <div id="tkView" style="display:none"></div>
 
       <!-- EXAM CRAFT VIEW -->
       <div id="cfView" style="display:none">
@@ -4599,6 +4651,439 @@ function prDiscardDraft(){
   prClearDraft();
   renderDash();
 }
+
+// ═══ TOOLKIT (calculators) ═══
+// Each calculator: title, blurb, formula, input specs, and a calc() that returns
+// { working: [strings], result: string, unit?: string, interp: html string, error?: string }.
+// example() returns a fresh {inputs...} for the "Try example" button.
+const TOOLKIT = {
+  ped: {
+    label: 'PED',
+    title: 'Price Elasticity <em>of Demand</em>',
+    blurb: 'How responsive quantity demanded is to price changes. Negative for a normal downward-sloping demand curve.',
+    formula: 'PED = %ΔQd ÷ %ΔP',
+    inputs: [
+      {id:'p1', label:'Original price P₁', unit:'£', def:10},
+      {id:'p2', label:'New price P₂', unit:'£', def:12},
+      {id:'q1', label:'Original quantity Q₁', def:100},
+      {id:'q2', label:'New quantity Q₂', def:80}
+    ],
+    calc: (v) => {
+      if(v.p1 === 0 || v.q1 === 0) return {error:'P₁ and Q₁ must be non-zero (dividing by them).'};
+      if(v.p1 === v.p2) return {error:'Prices are equal — no % change in price to divide by.'};
+      const dqp = (v.q2 - v.q1) / v.q1 * 100;
+      const dpp = (v.p2 - v.p1) / v.p1 * 100;
+      const ped = dqp / dpp;
+      const abs = Math.abs(ped);
+      let elast;
+      if(abs === 0) elast = 'perfectly inelastic';
+      else if(abs < 1) elast = 'inelastic';
+      else if(abs === 1) elast = 'unit elastic';
+      else elast = 'elastic';
+      const rev = abs > 1 ? 'A price cut would raise total revenue; a price rise reduces it.'
+                : abs < 1 ? 'A price rise raises total revenue; a price cut reduces it.'
+                : 'Total revenue is unchanged by price movements at this point.';
+      return {
+        working: [
+          `%ΔQd = (Q₂ − Q₁) ÷ Q₁ × 100 = (${v.q2} − ${v.q1}) ÷ ${v.q1} × 100 = ${dqp.toFixed(2)}%`,
+          `%ΔP = (P₂ − P₁) ÷ P₁ × 100 = (${v.p2} − ${v.p1}) ÷ ${v.p1} × 100 = ${dpp.toFixed(2)}%`,
+          `PED = ${dqp.toFixed(2)} ÷ ${dpp.toFixed(2)} = ${ped.toFixed(3)}`
+        ],
+        result: ped.toFixed(2),
+        interp: `Demand is <strong>${elast}</strong> (|PED| = ${abs.toFixed(2)}). ${rev}`
+      };
+    },
+    example: () => ({p1:8, p2:10, q1:120, q2:90})
+  },
+
+  pes: {
+    label: 'PES',
+    title: 'Price Elasticity <em>of Supply</em>',
+    blurb: 'How responsive quantity supplied is to price changes. Positive because supply slopes upward. Longer time period → more elastic.',
+    formula: 'PES = %ΔQs ÷ %ΔP',
+    inputs: [
+      {id:'p1', label:'Original price P₁', unit:'£', def:20},
+      {id:'p2', label:'New price P₂', unit:'£', def:24},
+      {id:'q1', label:'Original quantity Q₁', def:500},
+      {id:'q2', label:'New quantity Q₂', def:600}
+    ],
+    calc: (v) => {
+      if(v.p1 === 0 || v.q1 === 0) return {error:'P₁ and Q₁ must be non-zero.'};
+      if(v.p1 === v.p2) return {error:'Prices are equal — no % change in price to divide by.'};
+      const dqp = (v.q2 - v.q1) / v.q1 * 100;
+      const dpp = (v.p2 - v.p1) / v.p1 * 100;
+      const pes = dqp / dpp;
+      let elast;
+      if(pes === 0) elast = 'perfectly inelastic';
+      else if(pes < 1) elast = 'inelastic';
+      else if(pes === 1) elast = 'unit elastic';
+      else elast = 'elastic';
+      return {
+        working: [
+          `%ΔQs = (${v.q2} − ${v.q1}) ÷ ${v.q1} × 100 = ${dqp.toFixed(2)}%`,
+          `%ΔP = (${v.p2} − ${v.p1}) ÷ ${v.p1} × 100 = ${dpp.toFixed(2)}%`,
+          `PES = ${dqp.toFixed(2)} ÷ ${dpp.toFixed(2)} = ${pes.toFixed(3)}`
+        ],
+        result: pes.toFixed(2),
+        interp: `Supply is <strong>${elast}</strong> (PES = ${pes.toFixed(2)}). Longer time periods generally make supply more elastic as producers add capacity.`
+      };
+    },
+    example: () => ({p1:15, p2:18, q1:400, q2:520})
+  },
+
+  yed: {
+    label: 'YED',
+    title: 'Income Elasticity <em>of Demand</em>',
+    blurb: 'How responsive demand is to income changes. Sign identifies the type of good: normal, luxury or inferior.',
+    formula: 'YED = %ΔQd ÷ %ΔY',
+    inputs: [
+      {id:'y1', label:'Original income Y₁', unit:'£', def:30000},
+      {id:'y2', label:'New income Y₂', unit:'£', def:36000},
+      {id:'q1', label:'Original quantity Q₁', def:50},
+      {id:'q2', label:'New quantity Q₂', def:65}
+    ],
+    calc: (v) => {
+      if(v.y1 === 0 || v.q1 === 0) return {error:'Y₁ and Q₁ must be non-zero.'};
+      if(v.y1 === v.y2) return {error:'Incomes are equal — no % change to divide by.'};
+      const dqp = (v.q2 - v.q1) / v.q1 * 100;
+      const dyp = (v.y2 - v.y1) / v.y1 * 100;
+      const yed = dqp / dyp;
+      let type;
+      if(yed < 0) type = 'an <strong>inferior good</strong> — demand falls as income rises (e.g. bus travel, value brands)';
+      else if(yed === 0) type = 'a <strong>necessity with no income sensitivity</strong>';
+      else if(yed <= 1) type = 'a <strong>normal necessity</strong> — demand rises with income but less than proportionately (e.g. food staples)';
+      else type = 'a <strong>luxury / income-elastic good</strong> — demand rises more than proportionately with income (e.g. foreign holidays)';
+      return {
+        working: [
+          `%ΔQd = (${v.q2} − ${v.q1}) ÷ ${v.q1} × 100 = ${dqp.toFixed(2)}%`,
+          `%ΔY = (${v.y2} − ${v.y1}) ÷ ${v.y1} × 100 = ${dyp.toFixed(2)}%`,
+          `YED = ${dqp.toFixed(2)} ÷ ${dyp.toFixed(2)} = ${yed.toFixed(3)}`
+        ],
+        result: yed.toFixed(2),
+        interp: `This is ${type}.`
+      };
+    },
+    example: () => ({y1:28000, y2:35000, q1:40, q2:70})
+  },
+
+  xed: {
+    label: 'XED',
+    title: 'Cross Elasticity <em>of Demand</em>',
+    blurb: 'How responsive demand for good B is to a price change of good A. Positive = substitutes, negative = complements.',
+    formula: 'XED = %ΔQd(B) ÷ %ΔP(A)',
+    inputs: [
+      {id:'pa1', label:'Original price of A (Pa₁)', unit:'£', def:2},
+      {id:'pa2', label:'New price of A (Pa₂)', unit:'£', def:2.5},
+      {id:'qb1', label:'Original quantity of B (Qb₁)', def:200},
+      {id:'qb2', label:'New quantity of B (Qb₂)', def:230}
+    ],
+    calc: (v) => {
+      if(v.pa1 === 0 || v.qb1 === 0) return {error:'Pa₁ and Qb₁ must be non-zero.'};
+      if(v.pa1 === v.pa2) return {error:'Prices of A are equal — no % change to divide by.'};
+      const dqp = (v.qb2 - v.qb1) / v.qb1 * 100;
+      const dpp = (v.pa2 - v.pa1) / v.pa1 * 100;
+      const xed = dqp / dpp;
+      let type;
+      if(xed > 0.5) type = '<strong>close substitutes</strong> (e.g. Coke and Pepsi) — price rise in A shifts consumers to B';
+      else if(xed > 0) type = '<strong>weak substitutes</strong>';
+      else if(xed === 0) type = '<strong>unrelated</strong> goods';
+      else if(xed > -0.5) type = '<strong>weak complements</strong>';
+      else type = '<strong>close complements</strong> (e.g. printers and ink) — price rise in A also reduces demand for B';
+      return {
+        working: [
+          `%ΔQd(B) = (${v.qb2} − ${v.qb1}) ÷ ${v.qb1} × 100 = ${dqp.toFixed(2)}%`,
+          `%ΔP(A) = (${v.pa2} − ${v.pa1}) ÷ ${v.pa1} × 100 = ${dpp.toFixed(2)}%`,
+          `XED = ${dqp.toFixed(2)} ÷ ${dpp.toFixed(2)} = ${xed.toFixed(3)}`
+        ],
+        result: xed.toFixed(2),
+        interp: `The goods are ${type}. Competition authorities use XED to define market boundaries.`
+      };
+    },
+    example: () => ({pa1:1.5, pa2:2, qb1:300, qb2:420})
+  },
+
+  mult: {
+    label: 'Multiplier',
+    title: 'Keynesian <em>Multiplier</em>',
+    blurb: 'How much national income rises from an initial injection. Use MPC (closed economy) or MPS+MPT+MPM (full open economy).',
+    formula: 'k = 1 ÷ MPW  where  MPW = MPS + MPT + MPM  |  ΔNI = k × injection',
+    inputs: [
+      {id:'mpc', label:'MPC (marginal propensity to consume)', def:0.6},
+      {id:'mpt', label:'MPT (tax leakage)', def:0.2},
+      {id:'mpm', label:'MPM (import leakage)', def:0.1},
+      {id:'inj', label:'Initial injection ΔG or ΔI', unit:'£m', def:100}
+    ],
+    calc: (v) => {
+      if(v.mpc >= 1 || v.mpc < 0) return {error:'MPC must be between 0 and 1.'};
+      if(v.mpt < 0 || v.mpm < 0) return {error:'MPT and MPM cannot be negative.'};
+      const mps = 1 - v.mpc;
+      const mpw = mps + v.mpt + v.mpm;
+      if(mpw <= 0) return {error:'MPW must be positive — check the leakages sum.'};
+      const k = 1 / mpw;
+      const dNI = k * v.inj;
+      let size;
+      if(k > 3) size = 'a large multiplier — the economy strongly amplifies AD shocks';
+      else if(k > 1.5) size = 'a moderate multiplier — typical for an open economy like the UK';
+      else size = 'a small multiplier — high leakages dampen the AD impact';
+      return {
+        working: [
+          `MPS = 1 − MPC = 1 − ${v.mpc} = ${mps.toFixed(2)}`,
+          `MPW = MPS + MPT + MPM = ${mps.toFixed(2)} + ${v.mpt} + ${v.mpm} = ${mpw.toFixed(2)}`,
+          `k = 1 ÷ MPW = 1 ÷ ${mpw.toFixed(2)} = ${k.toFixed(2)}`,
+          `ΔNI = k × injection = ${k.toFixed(2)} × £${v.inj}m = £${dNI.toFixed(1)}m`
+        ],
+        result: k.toFixed(2),
+        interp: `The multiplier is ${k.toFixed(2)}, giving ΔNI = <strong>£${dNI.toFixed(1)}m</strong> from a £${v.inj}m injection. This is ${size}.`
+      };
+    },
+    example: () => ({mpc:0.7, mpt:0.15, mpm:0.2, inj:250})
+  },
+
+  tax: {
+    label: 'Tax incidence',
+    title: 'Tax <em>Incidence</em>',
+    blurb: 'How a specific tax splits between consumers and producers. The more inelastic side of the market bears the larger share.',
+    formula: 'Consumer share = PES ÷ (|PED| + PES)   |   Producer share = |PED| ÷ (|PED| + PES)',
+    inputs: [
+      {id:'ped', label:'PED (enter as positive)', def:0.4},
+      {id:'pes', label:'PES', def:1.6},
+      {id:'tax', label:'Specific tax per unit', unit:'£', def:2}
+    ],
+    calc: (v) => {
+      const absPed = Math.abs(v.ped);
+      if(absPed + v.pes === 0) return {error:'|PED| + PES = 0 — cannot divide.'};
+      if(v.pes < 0) return {error:'PES cannot be negative.'};
+      const cShare = v.pes / (absPed + v.pes);
+      const pShare = absPed / (absPed + v.pes);
+      const cPay = cShare * v.tax;
+      const pPay = pShare * v.tax;
+      const bearer = cShare > pShare ? 'consumers' : pShare > cShare ? 'producers' : 'both sides equally';
+      return {
+        working: [
+          `Consumer share = PES ÷ (|PED| + PES) = ${v.pes} ÷ (${absPed} + ${v.pes}) = ${(cShare*100).toFixed(1)}%`,
+          `Producer share = |PED| ÷ (|PED| + PES) = ${absPed} ÷ (${absPed} + ${v.pes}) = ${(pShare*100).toFixed(1)}%`,
+          `Consumer burden = ${(cShare*100).toFixed(1)}% × £${v.tax} = £${cPay.toFixed(2)} per unit`,
+          `Producer burden = ${(pShare*100).toFixed(1)}% × £${v.tax} = £${pPay.toFixed(2)} per unit`
+        ],
+        result: (cShare*100).toFixed(0) + '<small>% on consumers</small>',
+        interp: `The tax falls mostly on <strong>${bearer}</strong>. Consumers pay <strong>£${cPay.toFixed(2)}</strong> per unit and producers absorb <strong>£${pPay.toFixed(2)}</strong>. This is why governments tax inelastic goods (fuel, cigarettes) to raise revenue with minimal Q reduction.`
+      };
+    },
+    example: () => ({ped:0.3, pes:1.2, tax:5})
+  },
+
+  real: {
+    label: 'Real vs nominal',
+    title: 'Real <em>vs Nominal</em>',
+    blurb: 'Adjust a nominal (money) value for inflation using CPI. Real values compare purchasing power across years.',
+    formula: 'Real value = Nominal × (Base CPI ÷ Current CPI)',
+    inputs: [
+      {id:'nom', label:'Nominal value', unit:'£', def:30000},
+      {id:'baseCpi', label:'Base year CPI', def:100},
+      {id:'curCpi', label:'Current year CPI', def:118}
+    ],
+    calc: (v) => {
+      if(v.curCpi === 0) return {error:'Current CPI must be non-zero.'};
+      if(v.curCpi < 0 || v.baseCpi < 0) return {error:'CPI values cannot be negative.'};
+      const real = v.nom * (v.baseCpi / v.curCpi);
+      const infl = ((v.curCpi - v.baseCpi) / v.baseCpi) * 100;
+      const drop = ((v.nom - real) / v.nom) * 100;
+      return {
+        working: [
+          `Cumulative inflation from base = (${v.curCpi} − ${v.baseCpi}) ÷ ${v.baseCpi} × 100 = ${infl.toFixed(2)}%`,
+          `Real value = £${v.nom} × (${v.baseCpi} ÷ ${v.curCpi}) = £${real.toFixed(2)}`,
+          `Loss of purchasing power vs nominal = ${drop.toFixed(2)}%`
+        ],
+        result: '£' + real.toFixed(0),
+        interp: `Nominal £${v.nom} today has the purchasing power of <strong>£${real.toFixed(2)}</strong> in base-year terms. Prices have risen <strong>${infl.toFixed(1)}%</strong> since the base year, cutting real value by ${drop.toFixed(1)}%.`
+      };
+    },
+    example: () => ({nom:45000, baseCpi:100, curCpi:127})
+  },
+
+  cr: {
+    label: 'Concentration',
+    title: '<em>n-Firm</em> Concentration Ratio',
+    blurb: 'Combined market share of the largest n firms. CR₄ > 40% typically indicates an oligopoly. Enter shares separated by commas.',
+    formula: 'CRₙ = sum of market shares of the n largest firms (%)',
+    inputs: [
+      {id:'shares', label:'Market shares (%) comma-separated', unit:'%', def:'28,22,15,10,8,6,5,3,2,1', text:true}
+    ],
+    calc: (v) => {
+      const parts = String(v.shares).split(/[,\s]+/).map(x => parseFloat(x)).filter(x => !isNaN(x));
+      if(!parts.length) return {error:'Enter at least one numeric market share.'};
+      if(parts.some(x => x < 0)) return {error:'Market shares cannot be negative.'};
+      const sum = parts.reduce((a,b) => a+b, 0);
+      if(sum > 100.5) return {error:`Total shares sum to ${sum.toFixed(1)}% — should not exceed 100%.`};
+      const sorted = [...parts].sort((a,b) => b-a);
+      const cr3 = sorted.slice(0,3).reduce((a,b) => a+b, 0);
+      const cr4 = sorted.slice(0,4).reduce((a,b) => a+b, 0);
+      const cr5 = sorted.slice(0,5).reduce((a,b) => a+b, 0);
+      let structure;
+      if(cr4 >= 80) structure = 'a <strong>highly concentrated market</strong>, likely an oligopoly or near-monopoly';
+      else if(cr4 >= 60) structure = 'a <strong>concentrated oligopoly</strong>';
+      else if(cr4 >= 40) structure = 'a <strong>moderate oligopoly</strong>';
+      else if(cr4 >= 25) structure = '<strong>monopolistic competition</strong> tending toward oligopoly';
+      else structure = 'closer to <strong>competitive market</strong>';
+      return {
+        working: [
+          `Sorted shares (largest first): ${sorted.map(x => x.toFixed(1)+'%').join(', ')}`,
+          `CR₃ = ${sorted.slice(0,3).map(x => x.toFixed(1)).join(' + ')} = ${cr3.toFixed(1)}%`,
+          `CR₄ = ${sorted.slice(0,4).map(x => x.toFixed(1)).join(' + ')} = ${cr4.toFixed(1)}%`,
+          sorted.length >= 5 ? `CR₅ = ${sorted.slice(0,5).map(x => x.toFixed(1)).join(' + ')} = ${cr5.toFixed(1)}%` : null
+        ].filter(Boolean),
+        result: cr4.toFixed(0) + '<small>% CR₄</small>',
+        interp: `With CR₄ = ${cr4.toFixed(1)}%, this is ${structure}. Under the Competition Act, a firm with 25%+ share can be investigated for market abuse.`
+      };
+    },
+    example: () => ({shares:'34,26,12,10,8,5,3,2'})
+  }
+};
+
+let tkCurrent = 'ped';
+
+function tkOpen(){
+  document.getElementById('wel').style.display = 'none';
+  document.getElementById('tc').style.display = 'none';
+  document.getElementById('fcView').style.display = 'none';
+  document.getElementById('cfView').style.display = 'none';
+  document.getElementById('prView').style.display = 'none';
+  const lsv = document.getElementById('lsView');
+  if(lsv?.classList.contains('on')){ lsv.classList.remove('on'); lsv.innerHTML = ''; }
+  document.getElementById('fcTog').classList.remove('on');
+  document.getElementById('cfTog').classList.remove('on');
+  document.getElementById('prTog').classList.remove('on');
+  document.getElementById('tkTog').classList.add('on');
+  document.getElementById('tkView').style.display = 'block';
+  document.getElementById('tt').textContent = 'Toolkit';
+  tkRender(tkCurrent);
+  document.getElementById('tp').scrollTop = 0;
+}
+
+function tkClose(){
+  document.getElementById('tkView').style.display = 'none';
+  document.getElementById('tkView').innerHTML = '';
+  document.getElementById('tkTog').classList.remove('on');
+  if(curId){
+    document.getElementById('tc').style.display = 'block';
+    const t = TOPICS.find(x => x.id === curId);
+    if(t) document.getElementById('tt').textContent = `${t.id} — ${t.name}`;
+  } else {
+    document.getElementById('wel').style.display = 'block';
+    document.getElementById('tt').textContent = 'Select a topic to begin';
+    renderDash();
+  }
+}
+
+function tkRender(id){
+  tkCurrent = id;
+  const c = TOOLKIT[id];
+  const nav = Object.entries(TOOLKIT).map(([k, v]) =>
+    `<button class="${k===id?'on':''}" onclick="tkRender('${k}')">${v.label}</button>`
+  ).join('');
+  const inputs = c.inputs.map(inp => `
+    <div class="tk-in">
+      <label for="tk-${inp.id}">${inp.label}</label>
+      <div class="tk-in-row">
+        ${inp.unit ? `<span class="unit">${inp.unit}</span>` : ''}
+        <input type="${inp.text ? 'text' : 'number'}" id="tk-${inp.id}" data-id="${inp.id}" value="${inp.def}" step="any" oninput="tkCalc()">
+      </div>
+    </div>`).join('');
+  document.getElementById('tkView').innerHTML = `<div class="tk-mode">
+    <div class="tk-hdr">
+      <h1>Tool<em>kit</em></h1>
+      <p>Live calculators for Edexcel numeric questions. Formula, method, and interpretation update as you type. Every calc question on paper 3 uses one of these.</p>
+    </div>
+    <div class="tk-nav">${nav}</div>
+    <div class="tk-card">
+      <div class="tk-title">${c.title}</div>
+      <div class="tk-blurb">${c.blurb}</div>
+      <div class="tk-formula">${c.formula}</div>
+      <div class="tk-inputs">${inputs}</div>
+      <div class="tk-actions">
+        <button class="tk-btn-sec" onclick="tkExample()">⚂ Try example</button>
+      </div>
+      <div id="tkOut" class="tk-out"></div>
+    </div>
+  </div>`;
+  tkCalc();
+}
+
+function tkReadInputs(){
+  const c = TOOLKIT[tkCurrent];
+  const v = {};
+  c.inputs.forEach(inp => {
+    const el = document.getElementById('tk-' + inp.id);
+    v[inp.id] = inp.text ? el.value : parseFloat(el.value);
+  });
+  return v;
+}
+
+function tkCalc(){
+  const c = TOOLKIT[tkCurrent];
+  const v = tkReadInputs();
+  // Check for NaN in numeric inputs
+  const hasNaN = c.inputs.some(inp => !inp.text && (v[inp.id] === undefined || Number.isNaN(v[inp.id])));
+  const out = document.getElementById('tkOut');
+  if(hasNaN){
+    out.className = 'tk-out on';
+    out.innerHTML = `<div class="tk-err">Enter a value in every field to see the calculation.</div>`;
+    return;
+  }
+  const r = c.calc(v);
+  out.className = 'tk-out on';
+  if(r.error){
+    out.innerHTML = `<div class="tk-err">${r.error}</div>`;
+    return;
+  }
+  out.innerHTML = `
+    <div class="tk-result">
+      <div class="tk-result-lbl">Result</div>
+      <div class="tk-result-val">${r.result}</div>
+    </div>
+    <div class="tk-work">
+      <div class="tk-work-lbl">Method</div>
+      ${r.working.map(w => `<div class="tk-work-step">${w}</div>`).join('')}
+    </div>
+    <div class="tk-interp"><b>What this means</b>${r.interp}</div>`;
+}
+
+function tkExample(){
+  const c = TOOLKIT[tkCurrent];
+  const ex = c.example();
+  Object.entries(ex).forEach(([k, val]) => {
+    const el = document.getElementById('tk-' + k);
+    if(el) el.value = val;
+  });
+  tkCalc();
+}
+
+// Close toolkit when navigating elsewhere
+const _origLd_tk = ld;
+ld = function(id){
+  if(document.getElementById('tkView').style.display === 'block'){ tkClose(); }
+  _origLd_tk(id);
+};
+const _origFcOpen_tk = fcOpen;
+fcOpen = function(){
+  if(document.getElementById('tkView').style.display === 'block'){ tkClose(); }
+  _origFcOpen_tk();
+};
+const _origCfOpen_tk = cfOpen;
+cfOpen = function(){
+  if(document.getElementById('tkView').style.display === 'block'){ tkClose(); }
+  _origCfOpen_tk();
+};
+const _origPrOpen_tk = prOpen;
+prOpen = function(){
+  if(document.getElementById('tkView').style.display === 'block'){ tkClose(); }
+  _origPrOpen_tk();
+};
+const _origLsStart_tk = lsStart;
+lsStart = function(id){
+  if(document.getElementById('tkView').style.display === 'block'){ tkClose(); }
+  _origLsStart_tk(id);
+};
 
 // INIT — call AFTER all TOPICS are pushed
 buildSide();
